@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://TU-URL-DE-VERCEL.vercel.app/sitemap.xml
+Sitemap: https://mercedescuesta.vercel.app/sitemap.xml
