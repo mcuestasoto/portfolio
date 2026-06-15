@@ -4,7 +4,7 @@ Portfolio personal tipo CV web desarrollado para presentar mi perfil profesional
 
 ## 🚀 Demo
 
-[Ver portfolio](https://TU-URL-DE-VERCEL.vercel.app)
+[Ver portfolio](https://mercedescuesta.vercel.app/)
 
 ## 👩🏻‍💻 Sobre el proyecto
 
