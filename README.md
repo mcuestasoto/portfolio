@@ -4,7 +4,7 @@ Portfolio personal tipo CV web desarrollado para presentar mi perfil profesional
 
 ## 🚀 Demo
 
-[Ver portfolio](https://mercedescuesta.vercel.app/)
+[Ver portfolio](https://TU-URL-DE-VERCEL.vercel.app)
 
 ## 👩🏻‍💻 Sobre el proyecto
 
@@ -62,7 +62,7 @@ portfolio/
     │   └── mercedes-cuesta-cv-es.pdf
     └── img/
         ├── favicon.svg
-        └── og-image.png
+        └── og-preview.png
 ```
 
 ## 🌸 Autora
