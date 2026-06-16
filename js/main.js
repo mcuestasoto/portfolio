@@ -36,7 +36,6 @@ const navLinks = Array.from(
   document.querySelectorAll(".nav__link, .mobile-nav__link"),
 );
 
-
 const setActiveNavLink = (sectionId) => {
   navLinks.forEach((link) => {
     const isActive = link.getAttribute("href") === `#${sectionId}`;
@@ -54,7 +53,8 @@ const setActiveNavLink = (sectionId) => {
 const updateActiveSection = () => {
   if (!sections.length) return;
 
-  const activationPoint = window.scrollY + Math.min(window.innerHeight * 0.35, 260);
+  const activationPoint =
+    window.scrollY + Math.min(window.innerHeight * 0.35, 260);
   let currentSection = sections[0];
 
   sections.forEach((section) => {
@@ -163,7 +163,7 @@ internalLinks.forEach((link) => {
     const mobileHeader = document.querySelector(".mobile-header");
     const headerOffset =
       window.innerWidth <= 980 && mobileHeader
-        ? mobileHeader.offsetHeight + 12
+        ? mobileHeader.offsetHeight + 4
         : 24;
 
     const targetPosition =
