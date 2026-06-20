@@ -154,7 +154,7 @@ ul {
   padding: clamp(4.75rem, 9vh, 6.25rem) 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .hero {
@@ -190,7 +190,8 @@ ul {
   color: rgba(41, 50, 65, 0.82);
   font-size: 1rem;
   line-height: 1.7;
-  text-align: justify;
+  text-align: left;
+  word-spacing: normal;
 }
 
 .hero__availability {
@@ -215,7 +216,7 @@ ul {
 }
 
 .nav {
-  margin-top: 6rem;
+  margin-top: clamp(3rem, 6vh, 4.5rem);
 }
 
 .nav__list {
@@ -635,6 +636,36 @@ html.js .reveal.is-visible {
   transform: translateY(0);
 }
 
+@media (min-width: 981px) {
+  .sidebar {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  .sidebar__content {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding-bottom: clamp(3rem, 6vh, 4.5rem);
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+
+  .sidebar__content::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav {
+    margin-top: clamp(3rem, 6vh, 4.5rem);
+  }
+
+  .social-links {
+    margin-top: auto;
+    padding-top: clamp(2.5rem, 6vh, 4rem);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -940,6 +971,8 @@ html.js .reveal.is-visible {
     max-width: 25rem;
     font-size: 1.03rem;
     line-height: 1.75;
+    text-align: left;
+    word-spacing: normal;
   }
 
   .hero__availability {
@@ -981,33 +1014,31 @@ html.js .reveal.is-visible {
   }
 
   .mobile-nav {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 0.65rem;
+    width: 100%;
     max-width: 100%;
-    overflow-x: auto;
+    overflow: visible;
     padding: 0.1rem 0 0.4rem;
-    scrollbar-width: none;
-  }
-
-  .mobile-nav::-webkit-scrollbar {
-    display: none;
   }
 
   .mobile-nav__link {
-    flex: 0 0 auto;
+    min-width: 0;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     min-height: 2.75rem;
-    padding: 0 1rem;
+    padding: 0 0.75rem;
     border: 1px solid rgba(153, 143, 199, 0.28);
     border-radius: 999px;
     background-color: rgba(255, 255, 255, 0.42);
     color: var(--color-secondary);
     font-size: 0.76rem;
     font-weight: 800;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.08em;
     line-height: 1;
+    text-align: center;
     text-transform: uppercase;
   }
 
@@ -1228,6 +1259,10 @@ html.js .reveal.is-visible {
     max-width: 100%;
   }
 
+  .mobile-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .mobile-header {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -1281,7 +1316,7 @@ html.js .reveal.is-visible {
   }
 
   .mobile-nav__link {
-    padding: 0 0.85rem;
+    padding: 0 0.75rem;
     font-size: 0.72rem;
   }
 }
