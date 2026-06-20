@@ -390,7 +390,7 @@ ul {
 
 .project-card {
   position: relative;
-  min-height: clamp(20.5rem, 47vw, 22rem);
+  min-height: clamp(24rem, 50vw, 26rem);
   border-radius: 1rem;
   background-color: transparent;
   perspective: 1200px;
@@ -455,6 +455,7 @@ ul {
 
 .project-card__face--back {
   display: flex;
+  min-height: 100%;
   transform: rotateY(180deg);
   border: 1px solid rgba(152, 193, 217, 0.45);
   background-color: rgba(249, 245, 255, 0.94);
@@ -502,7 +503,7 @@ ul {
   flex-direction: column;
   width: 100%;
   padding: clamp(1rem, 2.5vw, 1.25rem);
-  overflow-y: auto;
+  overflow: visible;
   cursor: auto;
 }
 
@@ -868,7 +869,7 @@ html.js .reveal.is-visible {
   }
 
   .project-card {
-    min-height: clamp(22rem, 62vw, 24rem);
+    min-height: clamp(25rem, 68vw, 28rem);
   }
 
   .project-card__number {
@@ -1416,7 +1417,7 @@ body.is-mobile-menu-open {
   }
 
   .project-card {
-    min-height: clamp(23rem, 108vw, 25rem);
+    min-height: clamp(28rem, 128vw, 31rem);
     border-color: rgba(152, 193, 217, 0.42);
     border-radius: 1.1rem;
   }
