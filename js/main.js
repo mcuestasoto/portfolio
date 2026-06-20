@@ -33,7 +33,7 @@ if (!prefersReducedMotion) {
 
 const sections = Array.from(document.querySelectorAll("section[id]"));
 const navLinks = Array.from(
-  document.querySelectorAll(".nav__link, .mobile-nav__link"),
+  document.querySelectorAll(".nav__link, .mobile-menu__link"),
 );
 
 const setActiveNavLink = (sectionId) => {
@@ -73,6 +73,108 @@ navLinks.forEach((link) => {
     if (targetId) {
       setActiveNavLink(targetId);
     }
+  });
+});
+
+const mobileMenu = document.querySelector(".mobile-menu");
+const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+const mobileMenuLinks = document.querySelectorAll(".mobile-menu a");
+
+const setScrollbarCompensation = (isOpen) => {
+  const scrollbarWidth = isOpen
+    ? Math.max(window.innerWidth - document.documentElement.clientWidth, 0)
+    : 0;
+
+  root.style.setProperty("--scrollbar-compensation", `${scrollbarWidth}px`);
+};
+
+const setMobileMenuOpen = (isOpen, restoreFocus = false) => {
+  if (!mobileMenu || !mobileMenuToggle) return;
+
+  if (isOpen) {
+    setScrollbarCompensation(true);
+  }
+
+  mobileMenu.classList.toggle("is-open", isOpen);
+  mobileMenu.setAttribute("aria-hidden", isOpen ? "false" : "true");
+  mobileMenuToggle.setAttribute("aria-expanded", isOpen.toString());
+  mobileMenuToggle.setAttribute(
+    "aria-label",
+    isOpen ? "Cerrar menú de navegación" : "Abrir menú de navegación",
+  );
+  document.body.classList.toggle("is-mobile-menu-open", isOpen);
+
+  if (!isOpen) {
+    setScrollbarCompensation(false);
+  }
+
+  if (!isOpen && restoreFocus) {
+    mobileMenuToggle.focus();
+  }
+};
+
+if (mobileMenu && mobileMenuToggle) {
+  mobileMenuToggle.addEventListener("click", () => {
+    const isOpen = mobileMenuToggle.getAttribute("aria-expanded") === "true";
+
+    setMobileMenuOpen(!isOpen);
+  });
+
+  mobileMenu.addEventListener("click", (event) => {
+    if (event.target === mobileMenu) {
+      setMobileMenuOpen(false, true);
+    }
+  });
+
+  mobileMenuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      setMobileMenuOpen(false);
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (
+      event.key === "Escape" &&
+      mobileMenuToggle.getAttribute("aria-expanded") === "true"
+    ) {
+      setMobileMenuOpen(false, true);
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (
+      window.innerWidth > 980 &&
+      mobileMenuToggle.getAttribute("aria-expanded") === "true"
+    ) {
+      setMobileMenuOpen(false);
+    }
+  });
+}
+
+const projectCards = document.querySelectorAll("[data-project-card]");
+
+projectCards.forEach((card) => {
+  const setProjectCardFlipped = (isFlipped) => {
+    card.classList.toggle("is-flipped", isFlipped);
+    card.setAttribute("aria-expanded", isFlipped.toString());
+
+    if (!isFlipped) {
+      card.blur();
+    }
+  };
+
+  card.addEventListener("click", (event) => {
+    if (event.target.closest("a")) return;
+
+    setProjectCardFlipped(!card.classList.contains("is-flipped"));
+  });
+
+  card.addEventListener("keydown", (event) => {
+    if (event.target.closest("a")) return;
+    if (event.key !== "Enter" && event.key !== " ") return;
+
+    event.preventDefault();
+    setProjectCardFlipped(!card.classList.contains("is-flipped"));
   });
 });
 
