@@ -153,6 +153,61 @@ if (mobileMenu && mobileMenuToggle) {
 
 const projectCards = document.querySelectorAll("[data-project-card]");
 
+const getNumberStyleValue = (style, property) =>
+  Number.parseFloat(style.getPropertyValue(property)) || 0;
+
+const syncProjectCardHeights = () => {
+  if (!projectCards.length) return;
+
+  projectCards.forEach((card) => {
+    card.style.removeProperty("--project-card-height");
+  });
+
+  Array.from(projectCards).forEach((card) => {
+    const front = card.querySelector(".project-card__face--front");
+    const image = card.querySelector(".project-card__image");
+    const label = card.querySelector(".project-card__label");
+    const content = card.querySelector(".project-card__content");
+
+    if (!front || !image || !label || !content) return;
+
+    const frontStyle = window.getComputedStyle(front);
+    const cardStyle = window.getComputedStyle(card);
+    const frontPaddingY =
+      getNumberStyleValue(frontStyle, "padding-top") +
+      getNumberStyleValue(frontStyle, "padding-bottom");
+    const frontGap = getNumberStyleValue(frontStyle, "gap");
+    const imageStyle = window.getComputedStyle(image);
+    const previewMinHeight = getNumberStyleValue(imageStyle, "min-height");
+    const cardBorderY =
+      getNumberStyleValue(cardStyle, "border-top-width") +
+      getNumberStyleValue(cardStyle, "border-bottom-width");
+    const frontHeight =
+      frontPaddingY +
+      previewMinHeight +
+      frontGap +
+      label.offsetHeight +
+      cardBorderY;
+    const backHeight = content.scrollHeight + cardBorderY;
+
+    const cardHeight = Math.ceil(Math.max(frontHeight, backHeight));
+
+    if (!Number.isFinite(cardHeight) || cardHeight <= 0) return;
+    card.style.setProperty("--project-card-height", `${cardHeight}px`);
+  });
+};
+
+let projectCardResizeFrame = null;
+
+const requestProjectCardHeightSync = () => {
+  if (projectCardResizeFrame) return;
+
+  projectCardResizeFrame = window.requestAnimationFrame(() => {
+    syncProjectCardHeights();
+    projectCardResizeFrame = null;
+  });
+};
+
 projectCards.forEach((card) => {
   const setProjectCardFlipped = (isFlipped) => {
     card.classList.toggle("is-flipped", isFlipped);
@@ -176,7 +231,23 @@ projectCards.forEach((card) => {
     event.preventDefault();
     setProjectCardFlipped(!card.classList.contains("is-flipped"));
   });
+
+  card.querySelectorAll("img").forEach((image) => {
+    if (image.complete) return;
+    image.addEventListener("load", requestProjectCardHeightSync, {
+      once: true,
+    });
+  });
 });
+
+if (projectCards.length) {
+  syncProjectCardHeights();
+  window.addEventListener("resize", requestProjectCardHeightSync);
+
+  if (document.fonts?.ready) {
+    document.fonts.ready.then(requestProjectCardHeightSync);
+  }
+}
 
 const revealElements = document.querySelectorAll(".reveal");
 
