@@ -702,7 +702,6 @@ html.js .reveal.is-visible {
     opacity: 1;
     transform: none;
   }
-
 }
 
 @media (max-width: 980px) {
@@ -947,8 +946,7 @@ body.is-mobile-menu-open {
     color: var(--color-primary);
     cursor: pointer;
     font: inherit;
-    transition:
-      color 0.2s ease;
+    transition: color 0.2s ease;
   }
 
   .mobile-menu-toggle__mark {
@@ -989,11 +987,13 @@ body.is-mobile-menu-open {
     color: var(--color-primary);
   }
 
-  .mobile-menu-toggle[aria-expanded="true"] .mobile-menu-toggle__line:first-child {
+  .mobile-menu-toggle[aria-expanded="true"]
+    .mobile-menu-toggle__line:first-child {
     transform: rotate(45deg);
   }
 
-  .mobile-menu-toggle[aria-expanded="true"] .mobile-menu-toggle__line:last-child {
+  .mobile-menu-toggle[aria-expanded="true"]
+    .mobile-menu-toggle__line:last-child {
     transform: rotate(-45deg);
   }
 
@@ -1098,8 +1098,7 @@ body.is-mobile-menu-open {
     z-index: 100;
     display: block;
     padding: calc(var(--mobile-header-height) + env(safe-area-inset-top, 0px))
-      clamp(1.25rem, 5vw, 2rem)
-      calc(1.5rem + env(safe-area-inset-bottom, 0px));
+      clamp(1.25rem, 5vw, 2rem) calc(1.5rem + env(safe-area-inset-bottom, 0px));
     background:
       radial-gradient(
         700px circle at 12% 12%,
@@ -1460,5 +1459,4 @@ body.is-mobile-menu-open {
     width: 2.65rem;
     height: 2.65rem;
   }
-
 }
