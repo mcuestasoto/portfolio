@@ -24,7 +24,8 @@ Este portfolio funciona como una carta de presentación digital. Está diseñado
 - Sección de proyectos propios con enlace a la web y al repositorio de cada uno.
 - Enlaces profesionales a email, LinkedIn y GitHub.
 - Acceso al CV completo.
-- Open Graph para mejorar la vista previa al compartir la web.
+- Open Graph y datos estructurados (JSON-LD) para mejorar la vista previa al compartir la web y su aparición en buscadores.
+- Web app manifest e iconos para añadir la web a la pantalla de inicio en móvil.
 - Barra de progreso de scroll.
 - Botón para volver al inicio.
 - Estados `hover` y `focus-visible`.
@@ -50,6 +51,7 @@ portfolio/
 ├── README.md
 ├── robots.txt
 ├── sitemap.xml
+├── site.webmanifest
 ├── vercel.json
 ├── THIRD_PARTY_NOTICES.md
 ├── css/
@@ -61,6 +63,9 @@ portfolio/
     │   └── mercedes-cuesta-cv-es.pdf
     └── img/
         ├── favicon.svg
+        ├── apple-touch-icon.png
+        ├── icon-192.png
+        ├── icon-512.png
         └── projects/
             ├── project-portfolio-og.png
             └── project-dietista-og.png
