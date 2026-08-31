@@ -642,6 +642,42 @@ ul {
   line-height: 1.6;
 }
 
+.error-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.error-page__eyebrow {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
+
+.error-page__title {
+  margin-top: 0.75rem;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: var(--color-text);
+}
+
+.error-page__text {
+  margin-top: 1rem;
+  max-width: 28rem;
+  color: rgba(41, 50, 65, 0.84);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.error-page .resume-link {
+  margin-top: 2rem;
+  justify-content: center;
+}
+
 html.js .reveal {
   opacity: 0;
   transform: translateY(1rem);
