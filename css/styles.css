@@ -442,14 +442,6 @@ ul {
   color: var(--color-secondary);
 }
 
-.project-card__link,
-.resume-link,
-.mobile-menu__cv {
-  transition:
-    color 0.2s ease,
-    transform 0.2s ease;
-}
-
 .project-card__links {
   display: flex;
   flex-wrap: wrap;
