@@ -26,6 +26,8 @@ Este portfolio funciona como una carta de presentación digital. Está diseñado
 - Acceso al CV completo.
 - Open Graph y datos estructurados (JSON-LD) para mejorar la vista previa al compartir la web y su aparición en buscadores.
 - Web app manifest e iconos para añadir la web a la pantalla de inicio en móvil.
+- Página 404 personalizada.
+- Integración continua (GitHub Actions) que valida formato (Prettier) y HTML (html-validate) en cada push y pull request.
 - Barra de progreso de scroll.
 - Botón para volver al inicio.
 - Estados `hover` y `focus-visible`.
@@ -36,11 +38,23 @@ Este portfolio funciona como una carta de presentación digital. Está diseñado
 
 ## 🎨 Recursos y herramientas
 
-- Tipografía Inter.
+- Tipografía Inter (autoalojada).
 - Iconos SVG de Bootstrap Icons.
 - Recursos visuales diseñados en Canva.
 - Código editado en VS Code.
 - Despliegue en Vercel.
+
+## 🧑‍💻 Desarrollo
+
+No hay build ni framework: es HTML, CSS y JS servidos tal cual. Las herramientas de calidad de código viven en `ci/` (aparte del `package.json` raíz, que no existe a propósito, para que Vercel no intente tratar el sitio como un proyecto Node con build).
+
+```bash
+cd ci && npm install && cd ..
+./ci/node_modules/.bin/prettier --check "**/*.{html,css,js,json,md}"          # formato
+./ci/node_modules/.bin/html-validate --config .htmlvalidate.json index.html cv.html 404.html   # HTML
+```
+
+Ambos se ejecutan también en cada push/PR vía GitHub Actions (`.github/workflows/lint.yml`).
 
 ## 📁 Estructura
 
@@ -48,12 +62,19 @@ Este portfolio funciona como una carta de presentación digital. Está diseñado
 portfolio/
 ├── index.html
 ├── cv.html
+├── 404.html
 ├── README.md
 ├── robots.txt
 ├── sitemap.xml
 ├── site.webmanifest
 ├── vercel.json
+├── .htmlvalidate.json
 ├── THIRD_PARTY_NOTICES.md
+├── .github/
+│   └── workflows/
+│       └── lint.yml
+├── ci/
+│   └── package.json
 ├── css/
 │   └── styles.css
 ├── js/
@@ -61,6 +82,9 @@ portfolio/
 └── assets/
     ├── cv/
     │   └── mercedes-cuesta-cv-es.pdf
+    ├── fonts/
+    │   ├── inter-variable-latin.woff2
+    │   └── LICENSE-inter.txt
     └── img/
         ├── favicon.svg
         ├── apple-touch-icon.png

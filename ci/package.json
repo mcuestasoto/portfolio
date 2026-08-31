@@ -1,0 +1,8 @@
+{
+  "name": "portfolio-ci",
+  "private": true,
+  "devDependencies": {
+    "html-validate": "^11.11.0",
+    "prettier": "^3.9.6"
+  }
+}
