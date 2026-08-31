@@ -4,10 +4,10 @@ Este proyecto utiliza los siguientes recursos y herramientas de terceros.
 
 ## Inter
 
-Tipografía utilizada en la web.
+Tipografía utilizada en la web. Los ficheros de la fuente se sirven de forma local (`assets/fonts/`) en lugar de cargarse desde un CDN externo; se obtuvieron a través del paquete [Fontsource](https://fontsource.org/fonts/inter) `@fontsource-variable/inter`.
 
 - Web: https://rsms.me/inter/
-- Licencia: SIL Open Font License 1.1
+- Licencia: SIL Open Font License 1.1 (texto completo en `assets/fonts/LICENSE-inter.txt`)
 
 ## Bootstrap Icons
 
