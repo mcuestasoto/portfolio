@@ -3,8 +3,6 @@
   --color-text: #293241;
   --color-primary: #3d5a80;
   --color-secondary: #998fc7;
-  --color-secondary-soft: #998fc7;
-  --color-soft: #98c1d9;
   --color-accent: #dcf763;
   --color-spotlight: rgba(153, 143, 199, 0.1);
   --color-white: #ffffff;
@@ -95,7 +93,7 @@ ul {
   background: linear-gradient(
     90deg,
     var(--color-primary),
-    var(--color-secondary-soft),
+    var(--color-secondary),
     var(--color-accent)
   );
   transform: scaleX(var(--scroll-progress, 0));

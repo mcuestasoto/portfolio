@@ -8,9 +8,7 @@ Portfolio personal tipo CV web desarrollado para presentar mi perfil profesional
 
 ## 👩🏻‍💻 Sobre el proyecto
 
-Este portfolio funciona como una carta de presentación digital. Está diseñado para mostrar de forma clara y directa mi perfil técnico, stack principal, experiencia profesional y acceso a mi CV.
-
-Actualmente la web no incluye sección de proyectos, ya que está planteada como una primera versión tipo CV web. Más adelante se ampliará con proyectos propios de frontend.
+Este portfolio funciona como una carta de presentación digital. Está diseñado para mostrar de forma clara y directa mi perfil técnico, stack principal, proyectos propios, experiencia profesional y acceso a mi CV.
 
 ## 🛠️ Stack
 
@@ -23,6 +21,7 @@ Actualmente la web no incluye sección de proyectos, ya que está planteada como
 - Diseño responsive.
 - Layout tipo sidebar en escritorio.
 - Navegación interna por secciones.
+- Sección de proyectos propios con enlace a la web y al repositorio de cada uno.
 - Enlaces profesionales a email, LinkedIn y GitHub.
 - Acceso al CV completo.
 - Open Graph para mejorar la vista previa al compartir la web.
@@ -62,7 +61,9 @@ portfolio/
     │   └── mercedes-cuesta-cv-es.pdf
     └── img/
         ├── favicon.svg
-        └── og-preview.png
+        └── projects/
+            ├── project-portfolio-og.png
+            └── project-dietista-og.png
 ```
 
 ## 🌸 Autora
