@@ -345,6 +345,7 @@ ul {
 .skill-card__text,
 .project-card__title,
 .experience-card__title,
+.experience-card__subtitle,
 .experience-card__description,
 .experience-card__tags,
 .footer__credits {
@@ -374,6 +375,10 @@ ul {
   border-color: rgba(61, 90, 128, 0.35);
   background-color: rgba(255, 255, 255, 0.65);
   transform: translateY(-2px);
+}
+
+.skill-card--full {
+  grid-column: 1 / -1;
 }
 
 .skill-card__title {
@@ -531,10 +536,17 @@ ul {
 }
 
 .experience-card__title {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.35rem;
   font-size: 1rem;
   line-height: 1.45;
   color: var(--color-text);
+}
+
+.experience-card__subtitle {
+  margin-bottom: 0.75rem;
+  color: var(--color-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
 .experience-card__description {
@@ -1396,9 +1408,13 @@ body.is-mobile-menu-open {
   }
 
   .experience-card__title {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.35rem;
     font-size: 1rem;
     line-height: 1.45;
+  }
+
+  .experience-card__subtitle {
+    font-size: 0.86rem;
   }
 
   .experience-card__description {

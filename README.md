@@ -74,7 +74,8 @@ portfolio/
 │   └── workflows/
 │       └── lint.yml
 ├── ci/
-│   └── package.json
+│   ├── package.json
+│   └── package-lock.json
 ├── css/
 │   └── styles.css
 ├── js/
