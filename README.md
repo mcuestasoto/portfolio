@@ -1,62 +1,47 @@
-# Mercedes Cuesta · Portfolio ✨
+# Mercedes Cuesta · Portfolio
 
-Portfolio personal tipo CV web desarrollado para presentar mi perfil profesional como **Frontend Developer**, con experiencia previa en desarrollo Android para entorno e-commerce.
+Portfolio personal desarrollado con HTML, CSS y JavaScript para presentar mi perfil profesional y trabajo como Frontend Developer.
 
-## 🚀 Demo
+[![Preview del portfolio de Mercedes Cuesta](assets/img/projects/project-portfolio-og.png)](https://mercedescuesta.vercel.app/)
 
-[Ver portfolio](https://mercedescuesta.vercel.app/)
+## Demo
 
-## 👩🏻‍💻 Sobre el proyecto
+🌐 [Ver portfolio](https://mercedescuesta.vercel.app/)
 
-Este portfolio funciona como una carta de presentación digital. Está diseñado para mostrar de forma clara y directa mi perfil técnico, stack principal, proyectos propios, experiencia profesional y acceso a mi CV.
+## Sobre el proyecto
 
-## 🛠️ Stack
+Portfolio responsive desarrollado desde cero como espacio personal para presentar mi perfil profesional y facilitar el acceso a mi experiencia, CV, GitHub y LinkedIn.
 
-- HTML
-- CSS
+El proyecto está construido con tecnologías web nativas y presta especial atención a la claridad visual, el diseño responsive y la accesibilidad.
+
+## Stack
+
+- HTML5
+- CSS3
 - JavaScript
 
-## ✨ Características
+## Características
 
-- Diseño responsive.
-- Layout tipo sidebar en escritorio.
+- Diseño responsive, con layout de sidebar en escritorio.
 - Navegación interna por secciones.
-- Sección de proyectos propios con enlace a la web y al repositorio de cada uno.
+- Sección de proyectos con enlace a la web y al repositorio de cada uno.
 - Enlaces profesionales a email, LinkedIn y GitHub.
-- Acceso al CV completo.
-- Open Graph y datos estructurados (JSON-LD) para mejorar la vista previa al compartir la web y su aparición en buscadores.
-- Web app manifest e iconos para añadir la web a la pantalla de inicio en móvil.
-- Página 404 personalizada.
-- Integración continua (GitHub Actions) que valida formato (Prettier) y HTML (html-validate) en cada push y pull request.
+- Acceso al CV.
+- Open Graph y datos estructurados (JSON-LD) para la vista previa al compartir la web.
 - Barra de progreso de scroll.
 - Botón para volver al inicio.
-- Estados `hover` y `focus-visible`.
-- Enlace “Saltar al contenido” para mejorar accesibilidad.
-- Efecto visual suave siguiendo el cursor.
-- Respeto de `prefers-reduced-motion`.
+- Estados hover y focus-visible.
+- Página 404 personalizada.
 - Cabeceras de seguridad configuradas para Vercel.
 
-## 🎨 Recursos y herramientas
+## Accesibilidad
 
-- Tipografía Inter (autoalojada).
-- Iconos SVG de Bootstrap Icons.
-- Recursos visuales diseñados en Canva.
-- Código editado en VS Code.
-- Despliegue en Vercel.
+- Navegación mediante teclado.
+- Estados focus-visible en enlaces y botones.
+- Enlace "Saltar al contenido" para ir directamente al contenido principal.
+- Respeto de `prefers-reduced-motion`.
 
-## 🧑‍💻 Desarrollo
-
-No hay build ni framework: es HTML, CSS y JS servidos tal cual. Las herramientas de calidad de código viven en `ci/` (aparte del `package.json` raíz, que no existe a propósito, para que Vercel no intente tratar el sitio como un proyecto Node con build).
-
-```bash
-cd ci && npm install && cd ..
-./ci/node_modules/.bin/prettier --check "**/*.{html,css,js,json,md}"          # formato
-./ci/node_modules/.bin/html-validate --config .htmlvalidate.json index.html cv.html 404.html   # HTML
-```
-
-Ambos se ejecutan también en cada push/PR vía GitHub Actions (`.github/workflows/lint.yml`).
-
-## 📁 Estructura
+## Estructura
 
 ```txt
 portfolio/
@@ -64,12 +49,12 @@ portfolio/
 ├── cv.html
 ├── 404.html
 ├── README.md
+├── THIRD_PARTY_NOTICES.md
 ├── robots.txt
 ├── sitemap.xml
 ├── site.webmanifest
 ├── vercel.json
 ├── .htmlvalidate.json
-├── THIRD_PARTY_NOTICES.md
 ├── .github/
 │   └── workflows/
 │       └── lint.yml
@@ -96,14 +81,20 @@ portfolio/
             └── project-dietista-og.png
 ```
 
-## 🌸 Autora
+## Despliegue
 
-Mercedes Cuesta  
-[LinkedIn](https://www.linkedin.com/in/mcuestasoto)  
-[GitHub](https://github.com/mcuestasoto)
+El proyecto está desplegado en Vercel.
 
-## 🧾 Créditos
+🌐 https://mercedescuesta.vercel.app/
 
-Diseñado y desarrollado por Mercedes Cuesta.  
-Creado en VS Code y publicado con Vercel.  
-Todo el texto utiliza la tipografía Inter.
+## Autora
+
+Mercedes Cuesta
+
+- LinkedIn: https://www.linkedin.com/in/mcuestasoto
+- GitHub: https://github.com/mcuestasoto
+- Portfolio: https://mercedescuesta.vercel.app/
+
+Diseñado y desarrollado por Mercedes Cuesta.
+
+Atribuciones de terceros en [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md).
