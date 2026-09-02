@@ -24,10 +24,10 @@ El proyecto está construido con tecnologías web nativas y presta especial aten
 
 - Diseño responsive, con layout de sidebar en escritorio.
 - Navegación interna por secciones.
-- Sección de proyectos con enlace a la web y al repositorio de cada uno.
 - Enlaces profesionales a email, LinkedIn y GitHub.
 - Acceso al CV.
-- Open Graph y datos estructurados (JSON-LD) para la vista previa al compartir la web.
+- Open Graph.
+- Datos estructurados (JSON-LD).
 - Barra de progreso de scroll.
 - Botón para volver al inicio.
 - Estados hover y focus-visible.
@@ -77,8 +77,7 @@ portfolio/
         ├── icon-192.png
         ├── icon-512.png
         └── projects/
-            ├── project-portfolio-og.png
-            └── project-dietista-og.png
+            └── project-portfolio-og.png
 ```
 
 ## Despliegue
