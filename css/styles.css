@@ -376,6 +376,10 @@ ul {
   transform: translateY(-2px);
 }
 
+.skill-card--full {
+  grid-column: 1 / -1;
+}
+
 .skill-card__title {
   margin-bottom: 0.5rem;
   font-size: 1rem;
