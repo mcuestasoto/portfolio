@@ -5,32 +5,6 @@ const prefersReducedMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)",
 ).matches;
 
-if (!prefersReducedMotion) {
-  let mouseX = 0;
-  let mouseY = 0;
-  let mouseFrameRequested = false;
-
-  const updateMousePosition = () => {
-    root.style.setProperty("--mouse-x", `${mouseX}px`);
-    root.style.setProperty("--mouse-y", `${mouseY}px`);
-    mouseFrameRequested = false;
-  };
-
-  window.addEventListener(
-    "mousemove",
-    (event) => {
-      mouseX = event.clientX;
-      mouseY = event.clientY;
-
-      if (mouseFrameRequested) return;
-
-      mouseFrameRequested = true;
-      window.requestAnimationFrame(updateMousePosition);
-    },
-    { passive: true },
-  );
-}
-
 const sections = Array.from(document.querySelectorAll("section[id]"));
 const navLinks = Array.from(
   document.querySelectorAll(".nav__link, .mobile-menu__link"),
