@@ -20,10 +20,11 @@
   --color-white: #ffffff;
   --scrollbar-compensation: 0px;
 
-  --max-width: 1280px;
-  --sidebar-width: 0.42fr;
-  --content-width: 0.58fr;
-  --content-column-width: 42rem;
+  --max-width: 1440px;
+  --sidebar-width: 0.4fr;
+  --content-width: 0.6fr;
+  --content-column-width: 50rem;
+  --prose-width: 44rem;
 
   color-scheme: light;
   font-family: Inter, sans-serif;
@@ -37,6 +38,12 @@
 
 * {
   box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 html {
@@ -126,8 +133,8 @@ ul {
       0,
       var(--content-width)
     );
-  gap: clamp(5rem, 8vw, 7rem);
-  padding: 0 3rem;
+  gap: clamp(3rem, 4.5vw, 4.5rem);
+  padding: 0 clamp(1.5rem, 3vw, 2.5rem);
 }
 
 .sidebar {
@@ -224,6 +231,7 @@ ul {
   display: inline-flex;
   align-items: center;
   gap: 1rem;
+  min-height: 2rem;
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -262,6 +270,11 @@ ul {
 
 .social-links__item {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 999px;
   color: var(--color-secondary);
   transition:
     color 0.2s ease,
@@ -297,7 +310,7 @@ ul {
 }
 
 .section__content {
-  max-width: var(--content-column-width);
+  max-width: var(--prose-width);
   display: flex;
   flex-direction: column;
   gap: 1.35rem;
@@ -521,7 +534,7 @@ ul {
 
 .contact__location {
   margin-top: 1.5rem;
-  color: rgba(41, 50, 65, 0.65);
+  color: rgba(41, 50, 65, 0.7);
   font-size: 0.9rem;
 }
 
@@ -730,7 +743,7 @@ ul {
 
 .footer {
   padding-bottom: 4rem;
-  color: rgba(41, 50, 65, 0.65);
+  color: rgba(41, 50, 65, 0.7);
   font-size: 0.85rem;
   line-height: 1.7;
 }
@@ -1920,4 +1933,21 @@ body.is-mobile-menu-open {
   .education__languages {
     padding: 0.15rem 0 0;
   }
+}
+
+
+/* Accessibility polish */
+.section__content p a,
+.footer__credits a {
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+  text-decoration-color: rgba(61, 90, 128, 0.55);
+}
+
+.section__content p a:hover,
+.section__content p a:focus-visible,
+.footer__credits a:hover,
+.footer__credits a:focus-visible {
+  text-decoration-color: currentColor;
 }
