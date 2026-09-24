@@ -1,6 +1,6 @@
 # Mercedes Cuesta · Portfolio
 
-Portfolio personal desarrollado con HTML, CSS y JavaScript para presentar mi perfil profesional y trabajo como Frontend Developer.
+Portfolio personal desarrollado con HTML, CSS y JavaScript para presentar mi perfil como desarrolladora de software orientada a Frontend web, mi experiencia profesional y mis proyectos.
 
 [![Preview del portfolio de Mercedes Cuesta](assets/img/projects/project-portfolio-og.png)](https://mercedescuesta.vercel.app/)
 
@@ -10,7 +10,7 @@ Portfolio personal desarrollado con HTML, CSS y JavaScript para presentar mi per
 
 ## Sobre el proyecto
 
-Portfolio responsive desarrollado desde cero como espacio personal para presentar mi perfil profesional y facilitar el acceso a mi experiencia, CV, GitHub y LinkedIn.
+Portfolio responsive desarrollado desde cero como espacio personal para presentar mi perfil profesional, experiencia, proyectos y formación, y facilitar el acceso a mi CV, GitHub y LinkedIn.
 
 El proyecto está construido con tecnologías web nativas y presta especial atención a la claridad visual, el diseño responsive y la accesibilidad.
 
@@ -24,6 +24,8 @@ El proyecto está construido con tecnologías web nativas y presta especial aten
 
 - Diseño responsive, con layout de sidebar en escritorio.
 - Navegación interna por secciones.
+- Presentación de experiencia profesional, proyectos y formación.
+- Enlaces a demos y repositorios de proyectos.
 - Enlaces profesionales a email, LinkedIn y GitHub.
 - Acceso al CV.
 - Open Graph.
