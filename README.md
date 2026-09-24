@@ -1,5 +1,7 @@
 # Mercedes Cuesta · Portfolio
 
+![CI](https://github.com/mcuestasoto/portfolio/actions/workflows/lint.yml/badge.svg)
+
 Portfolio personal desarrollado con HTML, CSS y JavaScript para presentar mi perfil como desarrolladora de software orientada a Frontend web, mi experiencia profesional y mis proyectos.
 
 [![Preview del portfolio de Mercedes Cuesta](assets/img/projects/project-portfolio-og.png)](https://mercedescuesta.vercel.app/)
