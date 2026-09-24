@@ -53,6 +53,9 @@ navLinks.forEach((link) => {
 const mobileMenu = document.querySelector(".mobile-menu");
 const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
 const mobileMenuLinks = document.querySelectorAll(".mobile-menu a");
+const pageLayout = document.querySelector(".page-layout");
+const mobileHeaderBrand = document.querySelector(".mobile-header__brand");
+const firstMobileMenuLink = mobileMenu?.querySelector("a");
 
 const setScrollbarCompensation = (isOpen) => {
   const scrollbarWidth = isOpen
@@ -71,6 +74,16 @@ const setMobileMenuOpen = (isOpen, restoreFocus = false) => {
 
   mobileMenu.classList.toggle("is-open", isOpen);
   mobileMenu.setAttribute("aria-hidden", isOpen ? "false" : "true");
+  mobileMenu.inert = !isOpen;
+
+  if (pageLayout) {
+    pageLayout.inert = isOpen;
+  }
+
+  if (mobileHeaderBrand) {
+    mobileHeaderBrand.inert = isOpen;
+  }
+
   mobileMenuToggle.setAttribute("aria-expanded", isOpen.toString());
   mobileMenuToggle.setAttribute(
     "aria-label",
@@ -80,6 +93,10 @@ const setMobileMenuOpen = (isOpen, restoreFocus = false) => {
 
   if (!isOpen) {
     setScrollbarCompensation(false);
+  }
+
+  if (isOpen && firstMobileMenuLink) {
+    window.requestAnimationFrame(() => firstMobileMenuLink.focus());
   }
 
   if (!isOpen && restoreFocus) {
