@@ -529,7 +529,6 @@ ul {
   line-height: 1.65;
 }
 
-
 .projects__grid {
   max-width: var(--content-column-width);
   display: grid;
