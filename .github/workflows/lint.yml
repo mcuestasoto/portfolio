@@ -20,6 +20,18 @@ jobs:
       - working-directory: ci
         run: npm ci
 
+      - name: Format preview files
+        run: ./ci/node_modules/.bin/prettier --write index.html css/styles.css
+
+      - name: Emit formatted files
+        run: |
+          echo "___INDEX_START___"
+          cat index.html
+          echo "___INDEX_END___"
+          echo "___CSS_START___"
+          cat css/styles.css
+          echo "___CSS_END___"
+
       - run: ./ci/node_modules/.bin/prettier --check "**/*.{html,css,js,json,md}"
 
       - run: ./ci/node_modules/.bin/html-validate --config .htmlvalidate.json index.html cv.html 404.html
