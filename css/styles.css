@@ -356,12 +356,11 @@ ul {
   overflow: hidden;
   border: 1px solid rgba(152, 193, 217, 0.45);
   border-radius: 1rem;
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.72),
-      rgba(249, 245, 255, 0.5)
-    );
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.72),
+    rgba(249, 245, 255, 0.5)
+  );
   transition:
     border-color 0.2s ease,
     box-shadow 0.2s ease,
