@@ -108,6 +108,8 @@
           src="assets/img/favicon.svg"
           alt=""
           class="mobile-header__logo"
+          width="38"
+          height="38"
           aria-hidden="true"
         />
       </a>
@@ -373,14 +375,10 @@
         <section id="skills" class="section skills reveal">
           <h2 class="section__title">Stack</h2>
 
-          <div class="skills__grid">
-            <article class="skill-card">
-              <div class="skill-card__header">
-                <span class="skill-card__index" aria-hidden="true">01</span>
-                <h3 class="skill-card__title">Frontend</h3>
-              </div>
-
-              <ul class="skill-card__tags" aria-label="Tecnologías frontend">
+          <div class="skills-panel">
+            <div class="skill-row">
+              <h3 class="skill-row__title">Frontend</h3>
+              <ul class="skill-row__tags" aria-label="Tecnologías frontend">
                 <li>JavaScript</li>
                 <li>HTML5</li>
                 <li>CSS3</li>
@@ -388,16 +386,12 @@
                 <li>Responsive Web Design</li>
                 <li>Accesibilidad web</li>
               </ul>
-            </article>
+            </div>
 
-            <article class="skill-card">
-              <div class="skill-card__header">
-                <span class="skill-card__index" aria-hidden="true">02</span>
-                <h3 class="skill-card__title">Desarrollo</h3>
-              </div>
-
+            <div class="skill-row">
+              <h3 class="skill-row__title">Desarrollo</h3>
               <ul
-                class="skill-card__tags"
+                class="skill-row__tags"
                 aria-label="Herramientas de desarrollo"
               >
                 <li>Git</li>
@@ -406,79 +400,85 @@
                 <li>Jira</li>
                 <li>Agile/Scrum</li>
               </ul>
-            </article>
+            </div>
 
-            <article class="skill-card">
-              <div class="skill-card__header">
-                <span class="skill-card__index" aria-hidden="true">03</span>
-                <h3 class="skill-card__title">Datos</h3>
-              </div>
-
-              <ul class="skill-card__tags" aria-label="Tecnologías de datos">
+            <div class="skill-row">
+              <h3 class="skill-row__title">Datos</h3>
+              <ul class="skill-row__tags" aria-label="Tecnologías de datos">
                 <li>SQL</li>
               </ul>
-            </article>
+            </div>
           </div>
         </section>
 
         <section id="experience" class="section experience reveal">
           <h2 class="section__title">Experiencia</h2>
 
-          <div class="experience__list">
-            <article class="experience-card">
-              <p class="experience-card__period">oct. 2022 — mar. 2025</p>
+          <div class="timeline-list">
+            <article class="timeline-item">
+              <p class="timeline-item__period">oct. 2022 — mar. 2025</p>
 
-              <div class="experience-card__content">
-                <h3 class="experience-card__title">
+              <div class="timeline-item__content">
+                <h3 class="timeline-item__title">
                   Desarrolladora Android · ALTEN
                 </h3>
 
-                <p class="experience-card__subtitle">
+                <p class="timeline-item__subtitle">
                   Proyecto para Oysho | Grupo Inditex
                 </p>
 
-                <p class="experience-card__description">
-                  Desarrollo y mantenimiento de funcionalidades para una
-                  aplicación e-commerce Android en producción.
-                </p>
+                <div class="timeline-item__body">
+                  <p>
+                    Desarrollo y mantenimiento de funcionalidades para una
+                    aplicación e-commerce Android en producción.
+                  </p>
 
-                <p class="experience-card__description">
-                  Implementación de interfaces y componentes de usuario, lógica
-                  de cliente y gestión del estado de la aplicación.
-                </p>
+                  <p>
+                    Implementación de interfaces y componentes de usuario,
+                    lógica de cliente y gestión del estado de la aplicación.
+                  </p>
 
-                <p class="experience-card__description">
-                  Integración y consumo de APIs REST, resolución de incidencias
-                  y mejora del rendimiento.
-                </p>
+                  <p>
+                    Integración y consumo de APIs REST, resolución de
+                    incidencias y mejora del rendimiento.
+                  </p>
 
-                <p class="experience-card__description">
-                  Trabajo en equipo en entorno Agile/Scrum utilizando Git y
-                  Jira.
-                </p>
+                  <p>
+                    Trabajo en equipo en entorno Agile/Scrum utilizando Git y
+                    Jira.
+                  </p>
+                </div>
 
-                <p class="experience-card__tags">
-                  Kotlin · Java · XML · Android SDK
-                </p>
+                <ul
+                  class="timeline-item__tags"
+                  aria-label="Tecnologías utilizadas en ALTEN"
+                >
+                  <li>Kotlin</li>
+                  <li>Java</li>
+                  <li>XML</li>
+                  <li>Android SDK</li>
+                </ul>
               </div>
             </article>
 
-            <article class="experience-card">
-              <p class="experience-card__period">mar. 2022 — jun. 2022</p>
+            <article class="timeline-item">
+              <p class="timeline-item__period">mar. 2022 — jun. 2022</p>
 
-              <div class="experience-card__content">
-                <h3 class="experience-card__title">
+              <div class="timeline-item__content">
+                <h3 class="timeline-item__title">
                   Prácticas en desarrollo y datos · Accenture
                 </h3>
 
-                <p class="experience-card__description">
-                  Procesamiento de datos mediante procesos ETL y apoyo en tareas
-                  de integración y transformación.
-                </p>
+                <div class="timeline-item__body">
+                  <p>
+                    Procesamiento de datos mediante procesos ETL y apoyo en
+                    tareas de integración y transformación.
+                  </p>
 
-                <p class="experience-card__description">
-                  Trabajo con bases de datos dentro de un entorno corporativo.
-                </p>
+                  <p>
+                    Trabajo con bases de datos dentro de un entorno corporativo.
+                  </p>
+                </div>
               </div>
             </article>
           </div>
@@ -499,64 +499,102 @@
 
           <div class="projects__grid">
             <article class="project-card">
-              <div>
+              <div class="project-card__media">
+                <img
+                  src="assets/img/projects/project-portfolio-og.png"
+                  alt="Vista previa del portfolio personal de Mercedes Cuesta"
+                  loading="lazy"
+                  width="1200"
+                  height="630"
+                />
+              </div>
+
+              <div class="project-card__content">
                 <p class="project-card__eyebrow">Proyecto personal</p>
                 <h3 class="project-card__title">Portfolio personal</h3>
-                <p class="project-card__stack">HTML5 · CSS3 · JavaScript</p>
+
+                <ul
+                  class="project-card__tags"
+                  aria-label="Tecnologías del portfolio"
+                >
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>JavaScript</li>
+                </ul>
+
                 <p class="project-card__description">
                   Portfolio responsive desarrollado desde cero para presentar mi
                   perfil profesional, con navegación accesible, Open Graph,
                   datos estructurados y despliegue en Vercel.
                 </p>
-              </div>
 
-              <div class="project-card__links">
-                <a
-                  href="https://github.com/mcuestasoto/portfolio"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  referrerpolicy="no-referrer"
-                  class="project-card__link"
-                  aria-label="Ver el repositorio del portfolio personal en GitHub"
-                >
-                  GitHub <span aria-hidden="true">→</span>
-                </a>
+                <div class="project-card__links">
+                  <a
+                    href="https://github.com/mcuestasoto/portfolio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    referrerpolicy="no-referrer"
+                    class="project-card__link"
+                    aria-label="Ver el repositorio del portfolio personal en GitHub"
+                  >
+                    GitHub <span aria-hidden="true">→</span>
+                  </a>
+                </div>
               </div>
             </article>
 
             <article class="project-card">
-              <div>
+              <div class="project-card__media">
+                <img
+                  src="https://mercedes-cuesta-dietista.vercel.app/assets/images/og-image.png"
+                  alt="Vista previa de la web profesional de Mercedes Cuesta"
+                  loading="lazy"
+                  width="1200"
+                  height="630"
+                />
+              </div>
+
+              <div class="project-card__content">
                 <p class="project-card__eyebrow">Proyecto en producción</p>
                 <h3 class="project-card__title">Web profesional</h3>
-                <p class="project-card__stack">HTML5 · CSS3 · JavaScript</p>
+
+                <ul
+                  class="project-card__tags"
+                  aria-label="Tecnologías de la web profesional"
+                >
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>JavaScript</li>
+                </ul>
+
                 <p class="project-card__description">
                   Sitio web desarrollado con HTML, CSS y JavaScript, con diseño
                   responsive, componentes interactivos, accesibilidad web, SEO
                   técnico y optimización de rendimiento.
                 </p>
-              </div>
 
-              <div class="project-card__links">
-                <a
-                  href="https://mercedes-cuesta-dietista.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  referrerpolicy="no-referrer"
-                  class="project-card__link"
-                  aria-label="Ver la web profesional en producción"
-                >
-                  Ver proyecto <span aria-hidden="true">→</span>
-                </a>
-                <a
-                  href="https://github.com/mcuestasoto/mercedes-cuesta-dietista"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  referrerpolicy="no-referrer"
-                  class="project-card__link"
-                  aria-label="Ver el repositorio de la web profesional en GitHub"
-                >
-                  GitHub <span aria-hidden="true">→</span>
-                </a>
+                <div class="project-card__links">
+                  <a
+                    href="https://mercedes-cuesta-dietista.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    referrerpolicy="no-referrer"
+                    class="project-card__link"
+                    aria-label="Ver la web profesional en producción"
+                  >
+                    Ver proyecto <span aria-hidden="true">→</span>
+                  </a>
+                  <a
+                    href="https://github.com/mcuestasoto/mercedes-cuesta-dietista"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    referrerpolicy="no-referrer"
+                    class="project-card__link"
+                    aria-label="Ver el repositorio de la web profesional en GitHub"
+                  >
+                    GitHub <span aria-hidden="true">→</span>
+                  </a>
+                </div>
               </div>
             </article>
           </div>
@@ -565,24 +603,24 @@
         <section id="education" class="section education reveal">
           <h2 class="section__title">Formación</h2>
 
-          <div class="education__list">
-            <article class="education-card">
-              <p class="education-card__period">2026 — actualidad</p>
-              <div>
-                <h3 class="education-card__title">
+          <div class="timeline-list timeline-list--compact">
+            <article class="timeline-item">
+              <p class="timeline-item__period">2026 — actualidad</p>
+              <div class="timeline-item__content">
+                <h3 class="timeline-item__title">
                   Bootcamp Full-Stack JavaScript
                 </h3>
-                <p class="education-card__subtitle">JSCamp</p>
+                <p class="timeline-item__subtitle">JSCamp</p>
               </div>
             </article>
 
-            <article class="education-card">
-              <p class="education-card__period">2020 — 2022</p>
-              <div>
-                <h3 class="education-card__title">
+            <article class="timeline-item">
+              <p class="timeline-item__period">2020 — 2022</p>
+              <div class="timeline-item__content">
+                <h3 class="timeline-item__title">
                   Técnico Superior en Desarrollo de Aplicaciones Multiplataforma
                 </h3>
-                <p class="education-card__subtitle">
+                <p class="timeline-item__subtitle">
                   FESAC Formación y Estudios Sagrados Corazones
                 </p>
               </div>
@@ -591,7 +629,10 @@
 
           <div class="education__languages">
             <h3 class="education__languages-title">Idiomas</h3>
-            <p>Español: nativo · Inglés: B2 (Cambridge English: First, 2023)</p>
+            <p>
+              Español · Nativo <span aria-hidden="true">·</span> Inglés · B2 —
+              Cambridge English: First (2023)
+            </p>
           </div>
         </section>
 
