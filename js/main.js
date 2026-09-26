@@ -44,7 +44,9 @@ const requestActiveSectionUpdate = () => {
   window.requestAnimationFrame(updateActiveSection);
 };
 
-window.addEventListener("scroll", requestActiveSectionUpdate, { passive: true });
+window.addEventListener("scroll", requestActiveSectionUpdate, {
+  passive: true,
+});
 window.addEventListener("resize", requestActiveSectionUpdate);
 updateActiveSection();
 
@@ -71,7 +73,10 @@ const setMobileMenuOpen = (isOpen, restoreFocus = false) => {
   }
 
   mobileMenuToggle.setAttribute("aria-expanded", String(isOpen));
-  mobileMenuToggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+  mobileMenuToggle.setAttribute(
+    "aria-label",
+    isOpen ? "Cerrar menú" : "Abrir menú",
+  );
   document.body.classList.toggle("is-mobile-menu-open", isOpen);
 
   if (isOpen && firstMobileMenuLink) {
