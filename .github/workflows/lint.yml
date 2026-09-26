@@ -20,6 +20,24 @@ jobs:
       - working-directory: ci
         run: npm ci
 
+      - name: Format audited files
+        run: ./ci/node_modules/.bin/prettier --write index.html css/styles.css js/main.js 404.html
+
+      - name: Emit formatted files
+        run: |
+          echo "___INDEX_START___"
+          cat index.html
+          echo "___INDEX_END___"
+          echo "___CSS_START___"
+          cat css/styles.css
+          echo "___CSS_END___"
+          echo "___JS_START___"
+          cat js/main.js
+          echo "___JS_END___"
+          echo "___404_START___"
+          cat 404.html
+          echo "___404_END___"
+
       - run: ./ci/node_modules/.bin/prettier --check "**/*.{html,css,js,json,md}"
 
       - run: ./ci/node_modules/.bin/html-validate --config .htmlvalidate.json index.html cv.html 404.html
