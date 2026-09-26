@@ -40,7 +40,11 @@
 
   color-scheme: light;
   font-family:
-    "InterVariable", Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "InterVariable",
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
     sans-serif;
 }
 
