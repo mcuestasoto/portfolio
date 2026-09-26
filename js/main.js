@@ -1,11 +1,7 @@
 const root = document.documentElement;
 root.classList.add("js");
 
-const prefersReducedMotion = window.matchMedia(
-  "(prefers-reduced-motion: reduce)",
-).matches;
-
-const sections = Array.from(document.querySelectorAll("section[id]"));
+const sections = Array.from(document.querySelectorAll("main section[id]"));
 const navLinks = Array.from(
   document.querySelectorAll(".nav__link, .mobile-menu__link"),
 );
@@ -13,7 +9,6 @@ const navLinks = Array.from(
 const setActiveNavLink = (sectionId) => {
   navLinks.forEach((link) => {
     const isActive = link.getAttribute("href") === `#${sectionId}`;
-
     link.classList.toggle("is-active", isActive);
 
     if (isActive) {
@@ -24,11 +19,13 @@ const setActiveNavLink = (sectionId) => {
   });
 };
 
+let scrollTicking = false;
+
 const updateActiveSection = () => {
   if (!sections.length) return;
 
   const activationPoint =
-    window.scrollY + Math.min(window.innerHeight * 0.35, 260);
+    window.scrollY + Math.min(window.innerHeight * 0.3, 220);
   let currentSection = sections[0];
 
   sections.forEach((section) => {
@@ -38,17 +35,18 @@ const updateActiveSection = () => {
   });
 
   setActiveNavLink(currentSection.id);
+  scrollTicking = false;
 };
 
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    const targetId = link.getAttribute("href")?.replace("#", "");
+const requestActiveSectionUpdate = () => {
+  if (scrollTicking) return;
+  scrollTicking = true;
+  window.requestAnimationFrame(updateActiveSection);
+};
 
-    if (targetId) {
-      setActiveNavLink(targetId);
-    }
-  });
-});
+window.addEventListener("scroll", requestActiveSectionUpdate, { passive: true });
+window.addEventListener("resize", requestActiveSectionUpdate);
+updateActiveSection();
 
 const mobileMenu = document.querySelector(".mobile-menu");
 const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
@@ -57,20 +55,8 @@ const pageLayout = document.querySelector(".page-layout");
 const mobileHeaderBrand = document.querySelector(".mobile-header__brand");
 const firstMobileMenuLink = mobileMenu?.querySelector("a");
 
-const setScrollbarCompensation = (isOpen) => {
-  const scrollbarWidth = isOpen
-    ? Math.max(window.innerWidth - document.documentElement.clientWidth, 0)
-    : 0;
-
-  root.style.setProperty("--scrollbar-compensation", `${scrollbarWidth}px`);
-};
-
 const setMobileMenuOpen = (isOpen, restoreFocus = false) => {
   if (!mobileMenu || !mobileMenuToggle) return;
-
-  if (isOpen) {
-    setScrollbarCompensation(true);
-  }
 
   mobileMenu.classList.toggle("is-open", isOpen);
   mobileMenu.setAttribute("aria-hidden", isOpen ? "false" : "true");
@@ -84,16 +70,9 @@ const setMobileMenuOpen = (isOpen, restoreFocus = false) => {
     mobileHeaderBrand.inert = isOpen;
   }
 
-  mobileMenuToggle.setAttribute("aria-expanded", isOpen.toString());
-  mobileMenuToggle.setAttribute(
-    "aria-label",
-    isOpen ? "Cerrar menú de navegación" : "Abrir menú de navegación",
-  );
+  mobileMenuToggle.setAttribute("aria-expanded", String(isOpen));
+  mobileMenuToggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
   document.body.classList.toggle("is-mobile-menu-open", isOpen);
-
-  if (!isOpen) {
-    setScrollbarCompensation(false);
-  }
 
   if (isOpen && firstMobileMenuLink) {
     window.requestAnimationFrame(() => firstMobileMenuLink.focus());
@@ -107,14 +86,7 @@ const setMobileMenuOpen = (isOpen, restoreFocus = false) => {
 if (mobileMenu && mobileMenuToggle) {
   mobileMenuToggle.addEventListener("click", () => {
     const isOpen = mobileMenuToggle.getAttribute("aria-expanded") === "true";
-
     setMobileMenuOpen(!isOpen);
-  });
-
-  mobileMenu.addEventListener("click", (event) => {
-    if (event.target === mobileMenu) {
-      setMobileMenuOpen(false, true);
-    }
   });
 
   mobileMenuLinks.forEach((link) => {
@@ -141,103 +113,3 @@ if (mobileMenu && mobileMenuToggle) {
     }
   });
 }
-
-const revealElements = document.querySelectorAll(".reveal");
-
-if (prefersReducedMotion) {
-  revealElements.forEach((element) => {
-    element.classList.add("is-visible");
-  });
-} else {
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-
-        entry.target.classList.add("is-visible");
-        revealObserver.unobserve(entry.target);
-      });
-    },
-    {
-      threshold: 0.15,
-    },
-  );
-
-  revealElements.forEach((element) => {
-    revealObserver.observe(element);
-  });
-}
-
-const backToTopButton = document.querySelector(".back-to-top");
-let ticking = false;
-
-const updateScrollUI = () => {
-  const scrollTop = window.scrollY;
-  const documentHeight = root.scrollHeight - window.innerHeight;
-  const progress = documentHeight > 0 ? scrollTop / documentHeight : 0;
-
-  root.style.setProperty("--scroll-progress", progress.toString());
-
-  updateActiveSection();
-
-  if (backToTopButton) {
-    backToTopButton.classList.toggle("is-visible", scrollTop > 500);
-  }
-
-  ticking = false;
-};
-
-const requestScrollUpdate = () => {
-  if (ticking) return;
-
-  ticking = true;
-  window.requestAnimationFrame(updateScrollUI);
-};
-
-window.addEventListener("scroll", requestScrollUpdate, { passive: true });
-window.addEventListener("resize", requestScrollUpdate);
-
-updateScrollUI();
-
-if (backToTopButton) {
-  backToTopButton.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: prefersReducedMotion ? "auto" : "smooth",
-    });
-  });
-}
-
-const internalLinks = document.querySelectorAll('a[href^="#"]');
-
-internalLinks.forEach((link) => {
-  link.addEventListener("click", (event) => {
-    const targetId = link.getAttribute("href");
-
-    if (!targetId || targetId === "#") {
-      return;
-    }
-
-    const target = document.querySelector(targetId);
-
-    if (!target) {
-      return;
-    }
-
-    event.preventDefault();
-
-    const mobileHeader = document.querySelector(".mobile-header");
-    const headerOffset =
-      window.innerWidth <= 980 && mobileHeader
-        ? mobileHeader.offsetHeight + 4
-        : 24;
-
-    const targetPosition =
-      target.getBoundingClientRect().top + window.scrollY - headerOffset;
-
-    window.scrollTo({
-      top: targetPosition,
-      behavior: "smooth",
-    });
-  });
-});
