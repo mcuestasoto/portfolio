@@ -51,7 +51,7 @@ Sin frameworks ni dependencias de producción.
 - Open Graph y Twitter Card.
 - Datos estructurados JSON-LD.
 - Canonical, sitemap y `robots.txt`.
-- Fuente WOFF2 autoalojada y precargada.
+- Fuentes variables WOFF2 autoalojadas y precargadas.
 - GitHub Actions con Prettier y html-validate.
 - Cabeceras de seguridad en Vercel.
 - Despliegue continuo desde `main`.
@@ -67,7 +67,6 @@ portfolio/
 ├── THIRD_PARTY_NOTICES.md
 ├── robots.txt
 ├── sitemap.xml
-├── site.webmanifest
 ├── vercel.json
 ├── .htmlvalidate.json
 ├── .github/workflows/lint.yml
