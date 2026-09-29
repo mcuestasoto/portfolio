@@ -97,8 +97,9 @@ if (mobileMenu && mobileMenuToggle) {
   mobileMenuLinks.forEach((link) => {
     link.addEventListener("click", () => {
       const targetId = link.getAttribute("href");
-      const target =
-        targetId?.startsWith("#") ? document.querySelector(targetId) : null;
+      const target = targetId?.startsWith("#")
+        ? document.querySelector(targetId)
+        : null;
 
       setMobileMenuOpen(false);
 
