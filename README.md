@@ -32,7 +32,7 @@ Sin frameworks ni dependencias de producción.
 - Proyectos como principal evidencia visual y técnica.
 - Experiencia en formato editorial, sin sobrecargar con cards.
 - Sistema de espaciado consistente.
-- Identidad visual propia: base cálida y minimalista con acento tech.
+- Identidad visual tecnológica propia: base fría clara, tinta oscura y acento periwinkle/violeta, separada de la marca de Dietética.
 
 ## Accesibilidad
 
