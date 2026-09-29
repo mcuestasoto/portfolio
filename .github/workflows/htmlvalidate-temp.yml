@@ -1,0 +1,29 @@
+name: HTML validate diagnostic
+
+on:
+  push:
+    branches:
+      - audit/recruiter-ux-2026-09-26
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: ci/package-lock.json
+      - working-directory: ci
+        run: npm ci
+      - name: Capture html-validate output
+        run: |
+          ./ci/node_modules/.bin/html-validate --config .htmlvalidate.json index.html cv.html 404.html 2>&1 | tee htmlvalidate.txt || true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: htmlvalidate-diagnostic
+          path: htmlvalidate.txt
