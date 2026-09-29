@@ -193,8 +193,8 @@ strong {
   margin-top: 0;
   font-family: var(--font-heading);
   font-size: clamp(3rem, 4.4vw, 4.35rem);
-  line-height: 0.96;
-  letter-spacing: -0.055em;
+  line-height: 1;
+  letter-spacing: -0.045em;
   font-weight: 740;
 }
 
@@ -406,7 +406,6 @@ strong {
   transition: border-color 180ms ease;
 }
 
-.project-card:hover,
 .project-card:focus-within {
   border-color: rgba(91, 91, 214, 0.55);
 }
