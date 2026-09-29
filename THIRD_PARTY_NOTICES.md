@@ -4,17 +4,17 @@ Este proyecto utiliza los siguientes recursos y herramientas de terceros.
 
 ## Inter
 
-Tipografía utilizada en la web. Los ficheros de la fuente se sirven de forma local (`assets/fonts/`) en lugar de cargarse desde un CDN externo; se obtuvieron a través del paquete [Fontsource](https://fontsource.org/fonts/inter) `@fontsource-variable/inter`.
+Tipografía utilizada para cuerpo de texto y elementos de interfaz. Los ficheros se sirven localmente desde `assets/fonts/` y proceden de Fontsource.
 
 - Web: https://rsms.me/inter/
 - Licencia: SIL Open Font License 1.1 (texto completo en `assets/fonts/LICENSE-inter.txt`)
 
-## Bootstrap Icons
+## Manrope
 
-Iconos SVG utilizados para email, GitHub y LinkedIn.
+Tipografía utilizada en títulos y elementos principales de identidad. El fichero variable latino se sirve localmente desde `assets/fonts/` y procede de Fontsource.
 
-- Web: https://icons.getbootstrap.com/
-- Licencia: MIT
+- Web: https://www.fontsource.org/fonts/manrope
+- Licencia: SIL Open Font License 1.1 (texto completo en `assets/fonts/LICENSE-manrope.txt`)
 
 ## VS Code
 
