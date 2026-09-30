@@ -34,12 +34,12 @@
   --primary: #5b5bd6;
   --primary-strong: #4646b8;
   --accent-soft: #afa8ff;
-  --control-line: #858d9d;
 
   --page-max: 1360px;
   --prose: 68ch;
   --radius-sm: 6px;
-  --radius-md: 12px;
+  --radius-control: 8px;
+  --radius-md: 10px;
 
   --space-1: 0.5rem;
   --space-2: 0.75rem;
@@ -128,7 +128,7 @@ ul {
 }
 
 strong {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text);
 }
 
@@ -154,7 +154,7 @@ strong {
   border-radius: var(--radius-sm);
   background: var(--text);
   color: var(--bg);
-  font-weight: 700;
+  font-weight: 600;
   transition: transform 160ms ease;
 }
 
@@ -195,7 +195,7 @@ strong {
   font-size: clamp(3rem, 4.4vw, 4.35rem);
   line-height: 1;
   letter-spacing: -0.045em;
-  font-weight: 740;
+  font-weight: 700;
 }
 
 .hero__role {
@@ -204,7 +204,7 @@ strong {
   font-family: var(--font-heading);
   font-size: clamp(1.4rem, 2vw, 1.8rem);
   line-height: 1.2;
-  font-weight: 680;
+  font-weight: 600;
 }
 
 .hero__summary {
@@ -221,7 +221,7 @@ strong {
   gap: 0.6rem;
   color: var(--primary-strong);
   font-size: 0.9rem;
-  font-weight: 650;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -253,9 +253,9 @@ strong {
   gap: 0.35rem;
   padding: 0.65rem 0.95rem;
   border: 1px solid transparent;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-control);
   font-size: 0.88rem;
-  font-weight: 720;
+  font-weight: 600;
   line-height: 1.2;
   transition:
     background-color 160ms ease,
@@ -277,7 +277,7 @@ strong {
 .button--secondary {
   background: transparent;
   color: var(--text);
-  border-color: var(--control-line);
+  border-color: var(--primary-strong);
 }
 
 .button--secondary:hover {
@@ -300,7 +300,7 @@ strong {
   align-items: center;
   color: var(--primary);
   font-size: 0.88rem;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: underline;
   text-decoration-thickness: 0.08em;
   text-underline-offset: 0.18em;
@@ -329,7 +329,7 @@ strong {
   position: relative;
   color: var(--muted);
   font-size: 0.82rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   transition: color 160ms ease;
@@ -440,7 +440,7 @@ strong {
   gap: var(--space-2);
   color: var(--muted);
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
@@ -512,7 +512,7 @@ strong {
   background: var(--surface-soft);
   color: var(--text);
   font-size: 0.82rem;
-  font-weight: 650;
+  font-weight: 600;
   line-height: 1.2;
 }
 
@@ -546,7 +546,7 @@ strong {
 .language-row__label {
   color: var(--primary-strong);
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.05em;
   line-height: 1.5;
   text-transform: uppercase;
@@ -558,7 +558,7 @@ strong {
   font-size: 1.08rem;
   line-height: 1.4;
   letter-spacing: -0.015em;
-  font-weight: 680;
+  font-weight: 600;
 }
 
 .timeline__subtitle,
@@ -670,7 +670,7 @@ strong {
 .error-page__eyebrow {
   color: var(--primary-strong);
   font-size: 0.78rem;
-  font-weight: 760;
+  font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -758,7 +758,7 @@ strong {
     color: var(--text);
     font-family: var(--font-heading);
     font-size: 0.94rem;
-    font-weight: 700;
+    font-weight: 600;
   }
 
   .mobile-menu-toggle {
@@ -818,7 +818,7 @@ strong {
     align-items: center;
     color: var(--text);
     font-size: 1.05rem;
-    font-weight: 700;
+    font-weight: 600;
   }
 
   .mobile-menu__link.is-active {
