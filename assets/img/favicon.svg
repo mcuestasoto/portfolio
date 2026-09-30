@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Mercedes Cuesta">
-  <rect width="64" height="64" rx="14" fill="#5B5BD6"/>
-  <path d="M14 47V17h8.5L32 32.5 41.5 17H50v30h-7.5V29.2L32 45 21.5 29.2V47H14Z" fill="#FFFFFF"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-labelledby="title desc">
+  <title id="title">Favicon de Mercedes Cuesta</title>
+  <desc id="desc">Monograma M modular blanco sobre fondo periwinkle.</desc>
+  <rect width="100" height="100" rx="16" fill="#5B5BD6"/>
+  <polygon points="18,82 18,18 34,18 50,42 66,18 82,18 82,82 66,82 66,48 55,64 45,64 34,48 34,82" fill="#FFFFFF"/>
 </svg>
