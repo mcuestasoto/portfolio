@@ -4,7 +4,7 @@
 
 Portfolio personal desarrollado con HTML, CSS y JavaScript para presentar mi perfil como desarrolladora de software orientada a Frontend web, mi experiencia profesional y una selección de proyectos.
 
-[![Preview del portfolio de Mercedes Cuesta](assets/img/projects/project-portfolio-og.png)](https://mercedescuesta.vercel.app/)
+[![Open Graph del portfolio de Mercedes Cuesta](assets/img/mercedes-cuesta-open-graph.png)](https://mercedescuesta.vercel.app/)
 
 ## Demo
 
@@ -29,7 +29,7 @@ Sin frameworks ni dependencias de producción.
 - Layout responsive con sidebar informativa en escritorio.
 - Jerarquía visual orientada a lectura rápida.
 - Texto conciso y escaneable.
-- Proyectos como principal evidencia visual y técnica.
+- Proyectos como principal evidencia técnica y de trabajo.
 - Experiencia en formato editorial, sin sobrecargar con cards.
 - Sistema de espaciado consistente.
 - Identidad visual tecnológica propia: base fría clara, tinta oscura y acento periwinkle/violeta, separada de la marca de Dietética.
