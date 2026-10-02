@@ -23,3 +23,6 @@ jobs:
       - run: ./ci/node_modules/.bin/prettier --check "**/*.{html,css,js,json,md}"
 
       - run: ./ci/node_modules/.bin/html-validate --config .htmlvalidate.json index.html cv.html 404.html
+
+      - working-directory: ci
+        run: npm audit --json || true
