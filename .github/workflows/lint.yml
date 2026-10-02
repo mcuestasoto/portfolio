@@ -9,9 +9,9 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: npm
@@ -23,6 +23,3 @@ jobs:
       - run: ./ci/node_modules/.bin/prettier --check "**/*.{html,css,js,json,md}"
 
       - run: ./ci/node_modules/.bin/html-validate --config .htmlvalidate.json index.html cv.html 404.html
-
-      - working-directory: ci
-        run: npm audit --json || true
