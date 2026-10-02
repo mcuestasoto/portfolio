@@ -12,7 +12,7 @@ Portfolio personal desarrollado con HTML, CSS y JavaScript para presentar mi per
 
 ## Objetivo
 
-El portfolio funciona como una landing profesional de lectura rápida para recruiters y hiring managers: presenta el posicionamiento Frontend, proyectos publicados, experiencia profesional relevante, tecnologías demostradas, formación y vías de contacto.
+El portfolio funciona como una landing profesional de lectura rápida para recruiters y hiring managers: presenta primero el posicionamiento profesional y un breve Sobre mí, seguido de proyectos publicados, experiencia relevante, tecnologías demostradas, formación y vías de contacto.
 
 Complementa el CV, LinkedIn y GitHub sin reproducirlos: prioriza evidencia verificable, navegación directa y contenido escaneable.
 
@@ -26,10 +26,10 @@ Sin frameworks ni dependencias de producción.
 
 ## Criterios de diseño y UX
 
-- Layout responsive con sidebar y navegación persistentes en escritorio.
+- Layout responsive con navigation rail compacta y persistente en escritorio; cambia a header superior cuando la anchura o la altura disponible dejan de ser suficientes.
 - Jerarquía visual orientada a lectura rápida.
 - Texto conciso y escaneable.
-- Proyectos como evidencia Frontend visible antes del detalle de experiencia.
+- Sobre mí breve para contextualizar el perfil y proyectos como evidencia Frontend antes del detalle de experiencia.
 - Experiencia en formato editorial, sin sobrecargar con cards.
 - Sistema de espaciado consistente.
 - Identidad visual tecnológica propia: base fría clara, tinta oscura y acento periwinkle/violeta, separada de la marca de Dietética.
