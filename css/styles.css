@@ -286,6 +286,7 @@ strong {
   color: var(--primary-strong);
 }
 
+.about__name,
 .about__role {
   display: none;
 }
@@ -663,6 +664,7 @@ strong {
     padding: 0 clamp(1.25rem, 5vw, 2rem);
     border-bottom: 1px solid var(--line);
     background: rgba(247, 248, 252, 0.96);
+    -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
   }
 
@@ -765,12 +767,22 @@ strong {
     padding: 0 0 var(--space-7);
   }
 
-  .about__role {
+  .about__name {
     display: block;
     margin-bottom: var(--space-2);
+    font-family: var(--font-heading);
+    font-size: clamp(2.7rem, 9vw, 4rem);
+    line-height: 1;
+    letter-spacing: -0.045em;
+    font-weight: 700;
+  }
+
+  .about__role {
+    display: block;
+    margin-bottom: var(--space-3);
     color: var(--primary);
     font-family: var(--font-heading);
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 650;
   }
 
