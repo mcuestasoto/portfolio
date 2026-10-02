@@ -280,11 +280,11 @@ strong {
 .button--secondary {
   background: transparent;
   color: var(--text);
-  border-color: var(--primary-strong);
+  border-color: var(--line);
 }
 
 .button--secondary:hover {
-  border-color: var(--primary-strong);
+  border-color: var(--primary);
   color: var(--primary-strong);
   background: var(--surface);
 }
@@ -317,7 +317,12 @@ strong {
 }
 
 .nav {
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
   margin-top: var(--space-6);
+  padding-bottom: var(--space-2);
+  background: var(--bg);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -567,6 +572,7 @@ strong {
 }
 
 .tech-list__row {
+  grid-template-columns: 8rem minmax(0, 1fr);
   align-items: start;
 }
 
