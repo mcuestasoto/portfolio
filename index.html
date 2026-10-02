@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Mercedes Cuesta | Software Developer · Frontend</title>
+    <title>Mercedes Cuesta · Portfolio Frontend</title>
 
     <meta
       name="description"
@@ -153,6 +153,7 @@
 
     <div id="mobile-menu" class="mobile-menu" aria-hidden="true" inert>
       <nav class="mobile-menu__nav" aria-label="Navegación móvil">
+        <a href="#about" class="mobile-menu__link">Sobre mí</a>
         <a href="#projects" class="mobile-menu__link">Proyectos</a>
         <a href="#experience" class="mobile-menu__link">Experiencia</a>
         <a href="#skills" class="mobile-menu__link">Tecnologías</a>
@@ -160,84 +161,107 @@
         <a href="#contact" class="mobile-menu__link">Contacto</a>
       </nav>
 
-      <a
-        href="assets/cv/mercedes-cuesta-cv-es.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="mobile-menu__cv"
-      >
-        Ver CV <span aria-hidden="true">↗</span>
-        <span class="visually-hidden"> (se abre en una pestaña nueva)</span></a
-      >
+      <div class="mobile-menu__utility">
+        <a
+          href="cv.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mobile-menu__cv"
+        >
+          Ver CV <span aria-hidden="true">↗</span>
+          <span class="visually-hidden">
+            (se abre en una pestaña nueva)</span
+          ></a
+        >
+        <a
+          href="https://github.com/mcuestasoto"
+          target="_blank"
+          rel="noopener noreferrer"
+          referrerpolicy="no-referrer"
+          >GitHub <span aria-hidden="true">↗</span></a
+        >
+        <a
+          href="https://www.linkedin.com/in/mcuestasoto"
+          target="_blank"
+          rel="noopener noreferrer"
+          referrerpolicy="no-referrer"
+          >LinkedIn <span aria-hidden="true">↗</span></a
+        >
+      </div>
     </div>
 
     <div class="page-layout">
-      <aside class="sidebar" aria-label="Perfil profesional">
+      <aside class="sidebar" aria-label="Perfil y navegación">
         <div class="sidebar__content">
-          <div class="hero">
-            <h1 class="hero__name">Mercedes Cuesta</h1>
-            <p class="hero__role">Software Developer · Frontend</p>
-
-            <p class="hero__summary">
-              Desarrolladora de software con 2,5 años de experiencia profesional
-              en Android. Actualmente enfocada en el desarrollo frontend web con
-              JavaScript, HTML y CSS, aportando experiencia en interfaces, APIs
-              REST, Git y entornos Agile/Scrum.
-            </p>
-
-            <p class="hero__status">
-              <span class="hero__status-dot" aria-hidden="true"></span>
-              Sevilla, España · Abierta a oportunidades en Frontend
-            </p>
-
-            <div class="hero__actions">
-              <a
-                href="assets/cv/mercedes-cuesta-cv-es.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="button button--primary"
-              >
-                Ver CV <span aria-hidden="true">↗</span>
-                <span class="visually-hidden">
-                  (se abre en una pestaña nueva)</span
-                ></a
-              >
-            </div>
-
-            <nav class="hero__links" aria-label="Enlaces profesionales">
-              <a
-                href="https://github.com/mcuestasoto"
-                target="_blank"
-                rel="noopener noreferrer"
-                referrerpolicy="no-referrer"
-                >GitHub<span class="visually-hidden">
-                  (se abre en una pestaña nueva)</span
-                ></a
-              >
-              <a
-                href="https://www.linkedin.com/in/mcuestasoto"
-                target="_blank"
-                rel="noopener noreferrer"
-                referrerpolicy="no-referrer"
-                >LinkedIn<span class="visually-hidden">
-                  (se abre en una pestaña nueva)</span
-                ></a
-              >
-              <a href="mailto:mcuestasoto@gmail.com">Email</a>
-            </nav>
+          <div class="sidebar__identity">
+            <h1 class="sidebar__name">Mercedes Cuesta</h1>
+            <p class="sidebar__role">Software Developer · Frontend</p>
           </div>
 
           <nav class="nav" aria-label="Navegación principal">
+            <a href="#about" class="nav__link">Sobre mí</a>
             <a href="#projects" class="nav__link">Proyectos</a>
             <a href="#experience" class="nav__link">Experiencia</a>
             <a href="#skills" class="nav__link">Tecnologías</a>
             <a href="#education" class="nav__link">Formación</a>
             <a href="#contact" class="nav__link">Contacto</a>
           </nav>
+
+          <div class="sidebar__utility">
+            <a
+              href="cv.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="sidebar__cv"
+            >
+              Ver CV <span aria-hidden="true">↗</span>
+              <span class="visually-hidden">
+                (se abre en una pestaña nueva)</span
+              ></a
+            >
+
+            <nav class="sidebar__links" aria-label="Enlaces profesionales">
+              <a
+                href="https://github.com/mcuestasoto"
+                target="_blank"
+                rel="noopener noreferrer"
+                referrerpolicy="no-referrer"
+                >GitHub</a
+              >
+              <a
+                href="https://www.linkedin.com/in/mcuestasoto"
+                target="_blank"
+                rel="noopener noreferrer"
+                referrerpolicy="no-referrer"
+                >LinkedIn</a
+              >
+            </nav>
+          </div>
         </div>
       </aside>
 
       <main id="main-content" class="main-content" tabindex="-1">
+        <section id="about" class="section section--about" tabindex="-1">
+          <div class="section__header">
+            <p class="about__role">Software Developer · Frontend</p>
+            <h2 class="section__title">Sobre mí</h2>
+          </div>
+
+          <div class="about__content">
+            <p class="about__lead">
+              Desarrolladora de software con 2,5 años de experiencia profesional
+              en Android. Actualmente enfocada en el desarrollo frontend web con
+              JavaScript, HTML y CSS, aportando experiencia en interfaces, APIs
+              REST, Git y entornos Agile/Scrum.
+            </p>
+
+            <p class="about__status">
+              <span class="about__status-dot" aria-hidden="true"></span>
+              Sevilla, España · Abierta a oportunidades en Frontend
+            </p>
+          </div>
+        </section>
+
         <section id="projects" class="section" tabindex="-1">
           <div class="section__header">
             <h2 class="section__title">Proyectos</h2>
