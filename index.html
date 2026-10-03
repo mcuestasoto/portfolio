@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Mercedes Cuesta · Portfolio</title>
+    <title>Mercedes Cuesta | Software Developer · Frontend</title>
 
     <meta
       name="description"
@@ -153,10 +153,9 @@
 
     <div id="mobile-menu" class="mobile-menu" aria-hidden="true" inert>
       <nav class="mobile-menu__nav" aria-label="Navegación móvil">
-        <a href="#about" class="mobile-menu__link">Sobre mí</a>
         <a href="#projects" class="mobile-menu__link">Proyectos</a>
         <a href="#experience" class="mobile-menu__link">Experiencia</a>
-        <a href="#skills" class="mobile-menu__link">Tecnologías</a>
+        <a href="#skills" class="mobile-menu__link">Stack</a>
         <a href="#education" class="mobile-menu__link">Formación</a>
         <a href="#contact" class="mobile-menu__link">Contacto</a>
       </nav>
@@ -207,74 +206,75 @@
           </div>
 
           <nav class="nav" aria-label="Navegación principal">
-            <a href="#about" class="nav__link">Sobre mí</a>
             <a href="#projects" class="nav__link">Proyectos</a>
             <a href="#experience" class="nav__link">Experiencia</a>
-            <a href="#skills" class="nav__link">Tecnologías</a>
+            <a href="#skills" class="nav__link">Stack</a>
             <a href="#education" class="nav__link">Formación</a>
             <a href="#contact" class="nav__link">Contacto</a>
           </nav>
 
-          <nav class="sidebar__utility" aria-label="Enlaces profesionales">
-            <a
-              href="cv.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="utility-link"
-            >
-              CV <span class="external-arrow" aria-hidden="true">↗</span>
-              <span class="visually-hidden">
-                (se abre en una pestaña nueva)</span
-              ></a
-            >
-            <a
-              href="https://github.com/mcuestasoto"
-              target="_blank"
-              rel="noopener noreferrer"
-              referrerpolicy="no-referrer"
-              class="utility-link"
-              >GitHub <span class="external-arrow" aria-hidden="true">↗</span>
-              <span class="visually-hidden">
-                (se abre en una pestaña nueva)</span
-              ></a
-            >
-            <a
-              href="https://www.linkedin.com/in/mcuestasoto"
-              target="_blank"
-              rel="noopener noreferrer"
-              referrerpolicy="no-referrer"
-              class="utility-link"
-              >LinkedIn <span class="external-arrow" aria-hidden="true">↗</span>
-              <span class="visually-hidden">
-                (se abre en una pestaña nueva)</span
-              ></a
-            >
-          </nav>
+
         </div>
       </aside>
 
       <main id="main-content" class="main-content" tabindex="-1">
-        <section id="about" class="section section--about" tabindex="-1">
-          <div class="section__header">
-            <h1 class="about__name">Mercedes Cuesta</h1>
-            <p class="about__role">Software Developer · Frontend</p>
-            <h2 class="section__title">Sobre mí</h2>
-          </div>
+        <div class="intro">
+          <h1 class="intro__name">Mercedes Cuesta</h1>
+          <p class="intro__role">Software Developer · Frontend</p>
 
-          <div class="about__content">
-            <p class="about__lead">
-              Desarrolladora de software con 2,5 años de experiencia profesional
-              en Android. Actualmente enfocada en el desarrollo frontend web con
-              JavaScript, HTML y CSS, aportando experiencia en interfaces, APIs
-              REST, Git y entornos Agile/Scrum.
-            </p>
+          <p class="intro__lead">
+            Desarrolladora de software con 2,5 años de experiencia profesional
+            en Android para un proyecto de Oysho · Grupo Inditex. Actualmente
+            enfocada en desarrollo frontend web con JavaScript, HTML y CSS, y
+            ampliando mi stack hacia React y TypeScript.
+          </p>
 
-            <p class="about__status">
-              <span class="about__status-dot" aria-hidden="true"></span>
-              Sevilla, España · Abierta a oportunidades en Frontend
-            </p>
+          <p class="intro__status">
+            <span class="intro__status-dot" aria-hidden="true"></span>
+            Sevilla, España · Abierta a oportunidades en Frontend
+          </p>
+
+          <div class="intro__actions">
+            <a
+              href="cv.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="button button--primary"
+            >
+              Ver CV <span class="external-arrow" aria-hidden="true">↗</span>
+              <span class="visually-hidden">
+                (se abre en una pestaña nueva)</span
+              ></a
+            >
+
+            <nav class="intro__links" aria-label="Enlaces profesionales">
+              <a
+                href="https://github.com/mcuestasoto"
+                target="_blank"
+                rel="noopener noreferrer"
+                referrerpolicy="no-referrer"
+                class="utility-link"
+                >GitHub
+                <span class="external-arrow" aria-hidden="true">↗</span>
+                <span class="visually-hidden">
+                  (se abre en una pestaña nueva)</span
+                ></a
+              >
+              <a
+                href="https://www.linkedin.com/in/mcuestasoto"
+                target="_blank"
+                rel="noopener noreferrer"
+                referrerpolicy="no-referrer"
+                class="utility-link"
+                >LinkedIn
+                <span class="external-arrow" aria-hidden="true">↗</span>
+                <span class="visually-hidden">
+                  (se abre en una pestaña nueva)</span
+                ></a
+              >
+            </nav>
           </div>
-        </section>
+        </div>
 
         <section id="projects" class="section" tabindex="-1">
           <div class="section__header">
@@ -451,7 +451,7 @@
 
         <section id="skills" class="section" tabindex="-1">
           <div class="section__header">
-            <h2 class="section__title">Tecnologías</h2>
+            <h2 class="section__title">Stack</h2>
           </div>
 
           <dl class="tech-list">
@@ -463,14 +463,6 @@
                   <li>HTML5</li>
                   <li>CSS3</li>
                   <li>Bootstrap</li>
-                </ul>
-              </dd>
-            </div>
-
-            <div class="tech-list__row">
-              <dt>Web</dt>
-              <dd>
-                <ul class="tag-list">
                   <li>Responsive Web Design</li>
                   <li>Accesibilidad web</li>
                 </ul>
@@ -484,25 +476,18 @@
                   <li>Git</li>
                   <li>GitHub</li>
                   <li>APIs REST</li>
+                  <li>GitHub Actions</li>
+                  <li>Vercel</li>
                 </ul>
               </dd>
             </div>
 
             <div class="tech-list__row">
-              <dt>Entorno</dt>
+              <dt>En evolución</dt>
               <dd>
                 <ul class="tag-list">
-                  <li>Jira</li>
-                  <li>Agile/Scrum</li>
-                </ul>
-              </dd>
-            </div>
-
-            <div class="tech-list__row">
-              <dt>Datos</dt>
-              <dd>
-                <ul class="tag-list">
-                  <li>SQL</li>
+                  <li>React</li>
+                  <li>TypeScript</li>
                 </ul>
               </dd>
             </div>
@@ -570,7 +555,21 @@
                 (se abre en una pestaña nueva)</span
               ></a
             >
+            <a
+              href="https://github.com/mcuestasoto"
+              target="_blank"
+              rel="noopener noreferrer"
+              referrerpolicy="no-referrer"
+              class="button button--secondary"
+            >
+              GitHub <span class="external-arrow" aria-hidden="true">↗</span>
+              <span class="visually-hidden">
+                (se abre en una pestaña nueva)</span
+              ></a
+            >
           </div>
+
+          <p class="contact__location">Sevilla, España</p>
         </section>
 
         <footer class="footer">
