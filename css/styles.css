@@ -340,7 +340,18 @@ strong {
   margin-bottom: var(--space-8);
 }
 
-.intro__name,
+.intro__name {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .intro__role {
   display: none;
 }
@@ -847,8 +858,16 @@ strong {
   }
 
   .intro__name {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0 0 var(--space-2);
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    border: 0;
     display: block;
-    margin-bottom: var(--space-2);
     font-family: var(--font-heading);
     font-size: clamp(2.7rem, 9vw, 4rem);
     line-height: 1;
