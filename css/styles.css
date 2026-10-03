@@ -252,23 +252,30 @@ strong {
   min-height: 2.75rem;
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.35rem;
   color: var(--primary);
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.2;
-  text-decoration: underline;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.link-label {
+  text-decoration-line: underline;
   text-decoration-thickness: 0.08em;
   text-underline-offset: 0.2em;
-  text-decoration-color: rgba(91, 91, 214, 0.32);
-  transition:
-    color 160ms ease,
-    text-decoration-color 160ms ease;
+  text-decoration-color: rgba(91, 91, 214, 0.38);
+  transition: text-decoration-color 160ms ease;
 }
 
 .utility-link:hover,
 .text-link:hover {
   color: var(--primary-strong);
+}
+
+.utility-link:hover .link-label,
+.text-link:hover .link-label {
   text-decoration-color: currentColor;
 }
 
@@ -281,7 +288,7 @@ strong {
 .utility-link:hover .external-arrow,
 .text-link:hover .external-arrow,
 .button:hover .external-arrow {
-  transform: translate(0.12rem, -0.12rem);
+  transform: translate(0.1rem, -0.1rem);
 }
 
 .button {
