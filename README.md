@@ -44,7 +44,6 @@ Sin frameworks ni dependencias de producción. El contenido del portfolio difere
 - Soporte de `prefers-reduced-motion`.
 - Menú móvil con gestión de foco e `inert`.
 - Reflow responsive sin scroll horizontal.
-- Imágenes con dimensiones intrínsecas y alternativas adecuadas.
 
 ## SEO y calidad técnica
 
@@ -52,7 +51,7 @@ Sin frameworks ni dependencias de producción. El contenido del portfolio difere
 - Datos estructurados JSON-LD.
 - Canonical, sitemap y `robots.txt`.
 - Fuentes variables WOFF2 autoalojadas y precargadas.
-- GitHub Actions con Prettier y html-validate.
+- GitHub Actions con Prettier, html-validate y comprobación de sintaxis JavaScript.
 - Cabeceras de seguridad en Vercel.
 - Despliegue continuo desde `main`.
 
