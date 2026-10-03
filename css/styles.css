@@ -166,9 +166,9 @@ strong {
   width: min(100%, var(--page-max));
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(16rem, 19rem) minmax(0, 1fr);
-  gap: clamp(3rem, 5vw, 4rem);
-  padding: 0 clamp(1.5rem, 3vw, 2.5rem);
+  grid-template-columns: minmax(240px, 300px) minmax(0, 1fr);
+  gap: clamp(48px, 5vw, 64px);
+  padding: 0 clamp(24px, 3vw, 40px);
 }
 
 .sidebar {
@@ -180,7 +180,7 @@ strong {
   position: sticky;
   top: 0;
   height: 100svh;
-  padding: clamp(2.5rem, 6vh, 4rem) 0;
+  padding: clamp(40px, 6vh, 64px) 0;
   display: flex;
   flex-direction: column;
 }
@@ -203,7 +203,7 @@ strong {
 }
 
 .nav {
-  margin-top: clamp(2.5rem, 8vh, 4.5rem);
+  margin-top: clamp(40px, 8vh, 72px);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -570,12 +570,12 @@ strong {
 }
 
 .tech-list__row {
-  grid-template-columns: 8.5rem minmax(0, 1fr);
+  grid-template-columns: 136px minmax(0, 1fr);
   align-items: start;
 }
 
 .tech-list dt {
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .tech-list dd {
