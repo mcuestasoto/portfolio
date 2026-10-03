@@ -29,7 +29,7 @@ const updateActiveSection = () => {
     window.innerHeight + window.scrollY >=
     document.documentElement.scrollHeight - 2;
 
-  let currentSection = sections[0];
+  let currentSection = null;
 
   if (atPageBottom) {
     currentSection = sections[sections.length - 1];
@@ -41,7 +41,7 @@ const updateActiveSection = () => {
     });
   }
 
-  setActiveNavLink(currentSection.id);
+  setActiveNavLink(currentSection?.id ?? "");
   scrollTicking = false;
 };
 
