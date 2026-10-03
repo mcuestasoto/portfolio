@@ -409,6 +409,10 @@ strong {
   scroll-margin-top: 2rem;
 }
 
+.section[tabindex="-1"]:focus {
+  outline: none;
+}
+
 .section__header {
   max-width: var(--prose);
   margin-bottom: var(--space-5);
@@ -886,7 +890,7 @@ strong {
 
   .section {
     margin-bottom: var(--space-7);
-    scroll-margin-top: calc(var(--mobile-header-height) + 1rem);
+    scroll-margin-top: 0;
   }
 
   .projects-grid {
