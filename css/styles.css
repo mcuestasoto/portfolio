@@ -247,15 +247,6 @@ strong {
   margin-right: 0.6rem;
 }
 
-.sidebar__utility {
-  margin-top: auto;
-  padding-top: var(--space-4);
-  display: grid;
-  justify-items: start;
-  gap: 0.15rem;
-  border-top: 1px solid var(--line);
-}
-
 .utility-link,
 .text-link {
   min-height: 2.75rem;
@@ -337,22 +328,23 @@ strong {
   transform: translateY(-1px);
 }
 
-.about__name,
-.about__role {
+.intro {
+  max-width: var(--prose);
+  margin-bottom: var(--space-8);
+}
+
+.intro__name,
+.intro__role {
   display: none;
 }
 
-.about__content {
-  max-width: var(--prose);
-}
-
-.about__lead {
+.intro__lead {
   color: var(--text);
   font-size: 1.04rem;
   line-height: 1.72;
 }
 
-.about__status {
+.intro__status {
   margin-top: var(--space-4);
   display: flex;
   align-items: flex-start;
@@ -363,13 +355,27 @@ strong {
   line-height: 1.5;
 }
 
-.about__status-dot {
+.intro__status-dot {
   width: 0.55rem;
   height: 0.55rem;
   margin-top: 0.38rem;
   flex: 0 0 auto;
   border-radius: 50%;
   background: var(--accent-soft);
+}
+
+.intro__actions {
+  margin-top: var(--space-5);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.intro__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-3);
 }
 
 .main-content {
@@ -564,8 +570,12 @@ strong {
 }
 
 .tech-list__row {
-  grid-template-columns: 8rem minmax(0, 1fr);
+  grid-template-columns: 8.5rem minmax(0, 1fr);
   align-items: start;
+}
+
+.tech-list dt {
+  white-space: nowrap;
 }
 
 .tech-list dd {
@@ -610,6 +620,13 @@ strong {
   flex-wrap: wrap;
   align-items: center;
   gap: var(--space-3);
+}
+
+.contact__location {
+  margin-top: var(--space-4);
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 .footer {
@@ -822,7 +839,7 @@ strong {
     padding: 0 0 var(--space-7);
   }
 
-  .about__name {
+  .intro__name {
     display: block;
     margin-bottom: var(--space-2);
     font-family: var(--font-heading);
@@ -832,7 +849,7 @@ strong {
     font-weight: 700;
   }
 
-  .about__role {
+  .intro__role {
     display: block;
     margin-bottom: var(--space-3);
     color: var(--primary);
@@ -860,12 +877,18 @@ strong {
 }
 
 @media (max-width: 560px) {
+  .intro__actions,
   .contact__actions {
     display: grid;
     grid-template-columns: 1fr;
   }
 
-  .button {
+  .intro__actions > .button,
+  .contact__actions .button {
+    width: 100%;
+  }
+
+  .intro__links {
     width: 100%;
   }
 
@@ -885,7 +908,7 @@ strong {
     border-color: ButtonText;
   }
 
-  .about__status-dot,
+  .intro__status-dot,
   .project-card__highlights li::before,
   .timeline__list li::before {
     background: ButtonText;
