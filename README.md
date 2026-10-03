@@ -2,48 +2,59 @@
 
 ![CI](https://github.com/mcuestasoto/portfolio/actions/workflows/lint.yml/badge.svg)
 
-Portfolio personal desarrollado con HTML, CSS y JavaScript para presentar mi perfil como desarrolladora de software orientada a Frontend web, mi experiencia profesional y mis proyectos.
+Portfolio personal desarrollado con HTML, CSS y JavaScript para presentar mi perfil como desarrolladora de software orientada a Frontend web, mi experiencia profesional y una selección de proyectos.
 
-[![Preview del portfolio de Mercedes Cuesta](assets/img/projects/project-portfolio-og.png)](https://mercedescuesta.vercel.app/)
+[![Open Graph del portfolio de Mercedes Cuesta](assets/img/mercedes-cuesta-open-graph.png)](https://mercedescuesta.vercel.app/)
 
 ## Demo
 
 🌐 [Ver portfolio](https://mercedescuesta.vercel.app/)
 
-## Sobre el proyecto
+## Objetivo
 
-Portfolio responsive desarrollado desde cero como espacio personal para presentar mi perfil profesional, experiencia, proyectos y formación, y facilitar el acceso a mi CV, GitHub y LinkedIn.
+El portfolio funciona como una landing profesional de lectura rápida para recruiters y hiring managers: presenta primero el posicionamiento profesional y una introducción breve, seguida de proyectos publicados, experiencia relevante, stack, formación e idiomas y vías de contacto.
 
-El proyecto está construido con tecnologías web nativas y presta especial atención a la claridad visual, el diseño responsive y la accesibilidad.
+Complementa el CV, LinkedIn y GitHub sin reproducirlos: prioriza evidencia verificable, navegación directa y contenido escaneable.
 
-## Stack
+## Stack del proyecto
 
 - HTML5
 - CSS3
 - JavaScript
 
-## Características
+Sin frameworks ni dependencias de producción. El contenido del portfolio diferencia además entre stack demostrado, herramientas y tecnologías en evolución.
 
-- Diseño responsive, con layout de sidebar en escritorio.
-- Navegación interna por secciones.
-- Presentación de experiencia profesional, proyectos y formación.
-- Enlaces a demos y repositorios de proyectos.
-- Enlaces profesionales a email, LinkedIn y GitHub.
-- Acceso al CV.
-- Open Graph.
-- Datos estructurados (JSON-LD).
-- Barra de progreso de scroll.
-- Botón para volver al inicio.
-- Estados hover y focus-visible.
-- Página 404 personalizada.
-- Cabeceras de seguridad configuradas para Vercel.
+## Criterios de diseño y UX
+
+- Layout responsive con navigation rail compacta y persistente en escritorio; cambia a header superior cuando la anchura o la altura disponible dejan de ser suficientes.
+- Jerarquía visual orientada a lectura rápida.
+- Texto conciso y escaneable.
+- Posicionamiento e introducción profesional breves en la primera pantalla; Proyectos es el primer destino de navegación y la principal evidencia Frontend.
+- Experiencia en formato editorial, sin sobrecargar con cards.
+- Sistema de espaciado consistente.
+- Identidad visual tecnológica propia: base fría clara, tinta oscura y acento periwinkle/violeta, separada de la marca de Dietética.
 
 ## Accesibilidad
 
+- HTML semántico.
 - Navegación mediante teclado.
-- Estados focus-visible en enlaces y botones.
-- Enlace "Saltar al contenido" para ir directamente al contenido principal.
-- Respeto de `prefers-reduced-motion`.
+- Skip link.
+- Estados `focus-visible`.
+- Targets interactivos amplios.
+- Soporte de `prefers-reduced-motion`.
+- Menú móvil con gestión de foco e `inert`.
+- Reflow responsive sin scroll horizontal.
+- Imágenes con dimensiones intrínsecas y alternativas adecuadas.
+
+## SEO y calidad técnica
+
+- Open Graph y Twitter Card.
+- Datos estructurados JSON-LD.
+- Canonical, sitemap y `robots.txt`.
+- Fuentes variables WOFF2 autoalojadas y precargadas.
+- GitHub Actions con Prettier y html-validate.
+- Cabeceras de seguridad en Vercel.
+- Despliegue continuo desde `main`.
 
 ## Estructura
 
@@ -56,47 +67,25 @@ portfolio/
 ├── THIRD_PARTY_NOTICES.md
 ├── robots.txt
 ├── sitemap.xml
-├── site.webmanifest
 ├── vercel.json
 ├── .htmlvalidate.json
-├── .github/
-│   └── workflows/
-│       └── lint.yml
+├── .github/workflows/lint.yml
 ├── ci/
-│   ├── package.json
-│   └── package-lock.json
-├── css/
-│   └── styles.css
-├── js/
-│   └── main.js
+├── css/styles.css
+├── js/main.js
 └── assets/
-    ├── cv/
-    │   └── mercedes-cuesta-cv-es.pdf
+    ├── cv/mercedes-cuesta-cv-es.pdf
     ├── fonts/
-    │   ├── inter-variable-latin.woff2
-    │   └── LICENSE-inter.txt
     └── img/
-        ├── favicon.svg
-        ├── apple-touch-icon.png
-        ├── icon-192.png
-        ├── icon-512.png
-        └── projects/
-            └── project-portfolio-og.png
 ```
-
-## Despliegue
-
-El proyecto está desplegado en Vercel.
-
-🌐 https://mercedescuesta.vercel.app/
 
 ## Autora
 
 Mercedes Cuesta
 
-- LinkedIn: https://www.linkedin.com/in/mcuestasoto
-- GitHub: https://github.com/mcuestasoto
-- Portfolio: https://mercedescuesta.vercel.app/
+- [LinkedIn](https://www.linkedin.com/in/mcuestasoto)
+- [GitHub](https://github.com/mcuestasoto)
+- [Portfolio](https://mercedescuesta.vercel.app/)
 
 Diseñado y desarrollado por Mercedes Cuesta.
 

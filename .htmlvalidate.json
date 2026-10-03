@@ -3,7 +3,6 @@
   "rules": {
     "doctype-style": "off",
     "void-style": "off",
-    "hidden-focusable": "off",
-    "aria-label-misuse": "off"
+    "hidden-focusable": "off"
   }
 }
