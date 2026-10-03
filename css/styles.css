@@ -211,7 +211,7 @@ strong {
 }
 
 .nav__link {
-  min-height: 2.75rem;
+  min-height: 44px;
   display: inline-flex;
   align-items: center;
   position: relative;
@@ -530,8 +530,8 @@ strong {
 .education-item,
 .tech-list__row {
   display: grid;
-  grid-template-columns: 10.5rem minmax(0, 1fr);
-  gap: var(--space-5);
+  grid-template-columns: 168px minmax(0, 1fr);
+  gap: 32px;
   padding: var(--space-5) 0;
   border-bottom: 1px solid var(--line);
 }
@@ -599,8 +599,8 @@ strong {
 
 .language-row {
   display: grid;
-  grid-template-columns: 10.5rem minmax(0, 1fr);
-  gap: var(--space-5);
+  grid-template-columns: 168px minmax(0, 1fr);
+  gap: 32px;
   padding-top: var(--space-4);
 }
 
