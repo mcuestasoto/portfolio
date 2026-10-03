@@ -24,15 +24,22 @@ let scrollTicking = false;
 const updateActiveSection = () => {
   if (!sections.length) return;
 
-  const activationPoint =
-    window.scrollY + Math.min(window.innerHeight * 0.3, 220);
+  const activationPoint = Math.min(window.innerHeight * 0.3, 220);
+  const atPageBottom =
+    window.innerHeight + window.scrollY >=
+    document.documentElement.scrollHeight - 2;
+
   let currentSection = sections[0];
 
-  sections.forEach((section) => {
-    if (section.offsetTop <= activationPoint) {
-      currentSection = section;
-    }
-  });
+  if (atPageBottom) {
+    currentSection = sections[sections.length - 1];
+  } else {
+    sections.forEach((section) => {
+      if (section.getBoundingClientRect().top <= activationPoint) {
+        currentSection = section;
+      }
+    });
+  }
 
   setActiveNavLink(currentSection.id);
   scrollTicking = false;
@@ -48,6 +55,16 @@ window.addEventListener("scroll", requestActiveSectionUpdate, {
   passive: true,
 });
 window.addEventListener("resize", requestActiveSectionUpdate);
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    const targetId = link.getAttribute("href")?.replace("#", "");
+    if (targetId) {
+      setActiveNavLink(targetId);
+    }
+  });
+});
+
 updateActiveSection();
 
 const mobileMenu = document.querySelector(".mobile-menu");
