@@ -258,7 +258,7 @@ strong {
 
 .utility-link,
 .text-link {
-  min-height: 2.5rem;
+  min-height: 2.75rem;
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -326,7 +326,7 @@ strong {
 
 .button--secondary {
   background: var(--surface);
-  border-color: #c9cdd8;
+  border-color: var(--muted);
   color: var(--text);
 }
 
@@ -502,7 +502,7 @@ strong {
   border-radius: var(--radius-sm);
   background: var(--surface-soft);
   color: var(--text);
-  font-size: 0.82rem;
+  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.2;
 }
@@ -535,9 +535,9 @@ strong {
 .tech-list dt,
 .language-row__label {
   color: var(--primary-strong);
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: 600;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.045em;
   line-height: 1.5;
   text-transform: uppercase;
 }
@@ -616,7 +616,7 @@ strong {
   padding-top: var(--space-5);
   border-top: 1px solid var(--line);
   color: var(--muted);
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   line-height: 1.6;
 }
 
