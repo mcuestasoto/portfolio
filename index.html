@@ -67,20 +67,20 @@
 
     <link
       rel="icon"
-      href="assets/img/favicon.svg"
+      href="assets/img/favicon.svg?v=20261003"
       type="image/svg+xml"
       sizes="any"
     />
     <link
       rel="icon"
-      href="assets/img/icon-512.png"
+      href="assets/img/icon-512.png?v=20261003"
       type="image/png"
       sizes="512x512"
     />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="assets/img/apple-touch-icon.png"
+      href="assets/img/apple-touch-icon.png?v=20261003"
     />
     <link
       rel="preload"
@@ -166,9 +166,9 @@
           href="cv.html"
           target="_blank"
           rel="noopener noreferrer"
-          class="mobile-menu__cv"
+          class="mobile-menu__cv utility-link"
         >
-          Ver CV <span aria-hidden="true">↗</span>
+          CV <span class="external-arrow" aria-hidden="true">↗</span>
           <span class="visually-hidden">
             (se abre en una pestaña nueva)</span
           ></a
@@ -178,7 +178,8 @@
           target="_blank"
           rel="noopener noreferrer"
           referrerpolicy="no-referrer"
-          >GitHub <span aria-hidden="true">↗</span>
+          class="utility-link"
+          >GitHub <span class="external-arrow" aria-hidden="true">↗</span>
           <span class="visually-hidden">
             (se abre en una pestaña nueva)</span
           ></a
@@ -188,7 +189,8 @@
           target="_blank"
           rel="noopener noreferrer"
           referrerpolicy="no-referrer"
-          >LinkedIn <span aria-hidden="true">↗</span>
+          class="utility-link"
+          >LinkedIn <span class="external-arrow" aria-hidden="true">↗</span>
           <span class="visually-hidden">
             (se abre en una pestaña nueva)</span
           ></a
@@ -213,42 +215,41 @@
             <a href="#contact" class="nav__link">Contacto</a>
           </nav>
 
-          <div class="sidebar__utility">
+          <nav class="sidebar__utility" aria-label="Enlaces profesionales">
             <a
               href="cv.html"
               target="_blank"
               rel="noopener noreferrer"
-              class="sidebar__cv"
+              class="utility-link"
             >
-              Ver CV <span aria-hidden="true">↗</span>
+              CV <span class="external-arrow" aria-hidden="true">↗</span>
               <span class="visually-hidden">
                 (se abre en una pestaña nueva)</span
               ></a
             >
-
-            <nav class="sidebar__links" aria-label="Enlaces profesionales">
-              <a
-                href="https://github.com/mcuestasoto"
-                target="_blank"
-                rel="noopener noreferrer"
-                referrerpolicy="no-referrer"
-                >GitHub <span aria-hidden="true">↗</span>
-                <span class="visually-hidden">
-                  (se abre en una pestaña nueva)</span
-                ></a
-              >
-              <a
-                href="https://www.linkedin.com/in/mcuestasoto"
-                target="_blank"
-                rel="noopener noreferrer"
-                referrerpolicy="no-referrer"
-                >LinkedIn <span aria-hidden="true">↗</span>
-                <span class="visually-hidden">
-                  (se abre en una pestaña nueva)</span
-                ></a
-              >
-            </nav>
-          </div>
+            <a
+              href="https://github.com/mcuestasoto"
+              target="_blank"
+              rel="noopener noreferrer"
+              referrerpolicy="no-referrer"
+              class="utility-link"
+              >GitHub <span class="external-arrow" aria-hidden="true">↗</span>
+              <span class="visually-hidden">
+                (se abre en una pestaña nueva)</span
+              ></a
+            >
+            <a
+              href="https://www.linkedin.com/in/mcuestasoto"
+              target="_blank"
+              rel="noopener noreferrer"
+              referrerpolicy="no-referrer"
+              class="utility-link"
+              >LinkedIn <span class="external-arrow" aria-hidden="true">↗</span>
+              <span class="visually-hidden">
+                (se abre en una pestaña nueva)</span
+              ></a
+            >
+          </nav>
         </div>
       </aside>
 
@@ -318,7 +319,7 @@
                     referrerpolicy="no-referrer"
                     class="text-link"
                   >
-                    Ver código <span aria-hidden="true">↗</span>
+                    Ver código <span class="external-arrow" aria-hidden="true">↗</span>
                     <span class="visually-hidden">
                       (se abre en una pestaña nueva)</span
                     ></a
@@ -363,7 +364,7 @@
                     referrerpolicy="no-referrer"
                     class="text-link"
                   >
-                    Ver web <span aria-hidden="true">↗</span>
+                    Ver web <span class="external-arrow" aria-hidden="true">↗</span>
                     <span class="visually-hidden">
                       (se abre en una pestaña nueva)</span
                     ></a
@@ -375,7 +376,7 @@
                     referrerpolicy="no-referrer"
                     class="text-link"
                   >
-                    Ver código <span aria-hidden="true">↗</span>
+                    Ver código <span class="external-arrow" aria-hidden="true">↗</span>
                     <span class="visually-hidden">
                       (se abre en una pestaña nueva)</span
                     ></a
@@ -388,7 +389,7 @@
 
         <section id="experience" class="section" tabindex="-1">
           <div class="section__header">
-            <h2 class="section__title">Experiencia profesional</h2>
+            <h2 class="section__title">Experiencia</h2>
           </div>
 
           <div class="timeline">
@@ -447,7 +448,7 @@
 
         <section id="skills" class="section" tabindex="-1">
           <div class="section__header">
-            <h2 class="section__title">Tecnologías y herramientas</h2>
+            <h2 class="section__title">Tecnologías</h2>
           </div>
 
           <dl class="tech-list">
@@ -543,7 +544,7 @@
           <div class="section__header">
             <h2 class="section__title">Contacto</h2>
             <p class="section__intro">
-              Puedes escribirme por email o a través de LinkedIn.
+              Si quieres contactar conmigo, elige el canal que prefieras.
             </p>
           </div>
 
@@ -552,7 +553,7 @@
               href="mailto:mcuestasoto@gmail.com"
               class="button button--primary"
             >
-              Escribirme por email
+              Email
             </a>
             <a
               href="https://www.linkedin.com/in/mcuestasoto"
@@ -561,7 +562,7 @@
               referrerpolicy="no-referrer"
               class="button button--secondary"
             >
-              LinkedIn <span aria-hidden="true">↗</span>
+              LinkedIn <span class="external-arrow" aria-hidden="true">↗</span>
               <span class="visually-hidden">
                 (se abre en una pestaña nueva)</span
               ></a
