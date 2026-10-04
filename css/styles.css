@@ -186,11 +186,19 @@ strong {
 }
 
 .sidebar__name {
+  display: inline-block;
+  align-self: flex-start;
   font-family: var(--font-heading);
   font-size: clamp(2.35rem, 3.2vw, 3.35rem);
   line-height: 1;
   letter-spacing: -0.045em;
   font-weight: 700;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.sidebar__name:hover {
+  color: var(--primary-strong);
 }
 
 .sidebar__role {
