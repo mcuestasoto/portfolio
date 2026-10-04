@@ -26,7 +26,7 @@ Sin frameworks ni dependencias de producción. El contenido del portfolio difere
 
 ## Criterios de diseño y UX
 
-- Layout responsive con navigation rail compacta y persistente en escritorio; cambia a header superior cuando la anchura o la altura disponible dejan de ser suficientes.
+- Layout responsive con barra lateral de navegación compacta y persistente en escritorio; cambia a cabecera superior cuando la anchura o la altura disponible dejan de ser suficientes.
 - Jerarquía visual orientada a lectura rápida.
 - Texto conciso y escaneable.
 - Posicionamiento e introducción profesional breves en la primera pantalla; Proyectos es el primer destino de navegación y la principal evidencia Frontend.
