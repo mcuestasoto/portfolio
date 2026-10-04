@@ -76,6 +76,7 @@ const firstMobileMenuLink = mobileMenu?.querySelector("a");
 const compactNavigation = window.matchMedia(
   "(max-width: 1120px), (max-height: 700px)",
 );
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 const setMobileMenuOpen = (isOpen, restoreFocus = false) => {
   if (!mobileMenu || !mobileMenuToggle) return;
@@ -115,7 +116,7 @@ if (mobileMenu && mobileMenuToggle) {
   });
 
   mobileMenuLinks.forEach((link) => {
-    link.addEventListener("click", () => {
+    link.addEventListener("click", (event) => {
       const targetId = link.getAttribute("href");
       const target = targetId?.startsWith("#")
         ? document.querySelector(targetId)
@@ -124,7 +125,15 @@ if (mobileMenu && mobileMenuToggle) {
       setMobileMenuOpen(false);
 
       if (target) {
+        event.preventDefault();
+        setActiveNavLink(target.id);
+
         window.requestAnimationFrame(() => {
+          window.history.pushState(null, "", targetId);
+          target.scrollIntoView({
+            behavior: reducedMotion.matches ? "auto" : "smooth",
+            block: "start",
+          });
           target.focus({ preventScroll: true });
         });
       }
